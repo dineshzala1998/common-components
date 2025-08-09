@@ -19,7 +19,7 @@ $(document).ready(function () {
     // Initialize Select2 SelectPicker
     $('.select2-selectpicker').select2({
         tags: "true",
-        minimumResultsForSearch: Infinity, // disables search
+        // minimumResultsForSearch: Infinity, // disables search
     });
 });
 
@@ -33,6 +33,7 @@ function formatCountry(option) {
 $(document).ready(function () {
   $('#countrySelectImg, #countrySelectcode').select2({
     placeholder: 'Select a country',
+    // minimumResultsForSearch: Infinity, // disables search
     templateResult: formatCountry,
     templateSelection: formatCountry
   });
