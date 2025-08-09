@@ -1,0 +1,241 @@
+.dropdown{
+    &.bootstrap-select{
+        width: 100% !important;
+
+        .dropdown-toggle.btn-light {
+            padding: 12px 16px;
+            padding-right: 40px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            line-height: 20px;
+            // font-family: $secondary-font;
+            font-weight: $w-medium;
+            color: $secondary;
+            @include out-shadow-none;
+            @include border-radius(10px);
+            @include transition-three;
+
+            &::after {
+                @include before-after;
+                right: 15px;
+                top: 0px;
+                bottom: 0;
+                background: url('../../assets/images/dropdown-icon.svg') no-repeat center center;
+                width: 15px;
+                height: 15px;
+                background-size: contain;
+                padding: 0;
+                margin: auto 0;
+                border: none;
+                @include transition-three;
+                @include rotate-x(0deg);
+            }
+
+            &:focus {
+                outline: none !important;
+                box-shadow: none;
+            }
+
+            .filter-option-inner-inner {
+                @include text-ellipsis-line(1);
+                img{
+                    width: 20px;
+                    height: 15px;
+                    margin-right: 6px;
+                    position: relative;
+                    bottom: 2px;
+                }
+            }
+            &.show{
+                border-color: $secondary;
+
+                &::after {
+                    @include rotate-x(180deg);
+                }
+            }
+            &.bs-placeholder{
+                .filter-option-inner-inner {
+                    font-weight: $w-regular;
+                    color: rgba($secondary, 0.7);
+                }
+            }
+        }
+
+        > .dropdown-menu {
+            background: $white;
+            box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            width: 100%;
+            overflow: hidden;
+
+            .bs-searchbox{
+                .form-control{
+                    @include out-shadow-none;
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    // font-family: $secondary-font;
+                    font-weight: $w-regular;
+                    color: $secondary;
+                    border: 1px solid #ccc;
+                    @include border-radius(10px);
+                    @include transition-three;
+
+                    &:focus {
+                        border-color: $secondary;
+                    }
+                }
+            }
+
+            > .inner{
+                @include scroll-bar;
+            }
+
+            ul {
+                padding: 0 8px;
+                li {
+                    a {
+                        font-size: 16px;
+                        line-height: 20px;
+                        // font-family: $secondary-font;
+                        font-weight: $w-regular;
+                        color: $secondary;
+                        position: relative;
+                        background: transparent;
+                        padding: 8px 10px;
+                        margin: 2px 0;
+                        @include transition-three;
+                        @include border-radius(10px);
+                        
+                        &.selected, &:hover{
+                            color: #ffff;
+                            background-color: rgba($secondary, 0.7);
+                        }
+                        .text{
+                            margin: 0;
+                            @include text-ellipsis-line(1);
+                            
+                            img{
+                                width: 20px;
+                                height: 15px;
+                                margin-right: 6px;
+                            }
+                        }
+                        &::before{
+                            @include before-after;
+                            left: 8px;
+                            right: 8px;
+                            bottom: 0;
+                            height: 1px;
+                            background-color: rgba($secondary, 0.1)
+                        }
+                    }
+
+                    &:last-child{
+                        a{
+                            &::before{
+                                display: none;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        &.checkbox-select{
+            > .dropdown-menu {
+                ul {
+                    li{
+                        a{
+                            .check-mark{
+                                @include border-radius(2px);
+                                border: 1px solid rgba($secondary, 0.4);
+
+                                &::after{
+                                    background: url('../../assets/images/check-right-icon.svg') no-repeat center center;
+                                    background-size: 10px;
+                                    filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(6698%) hue-rotate(181deg) brightness(117%) contrast(94%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.radio-select{
+            > .dropdown-menu {
+                ul {
+                    li{
+                        a{
+                            .check-mark{
+                                @include border-radius(50px);
+                                border: 2px solid rgba($secondary, 0.4);
+
+                                &::after{
+                                    background: url('../../assets/images/rounded-dots.svg') no-repeat center center;
+                                    background-size: 8px;
+                                    filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(6698%) hue-rotate(181deg) brightness(117%) contrast(94%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.show-tick{
+            > .dropdown-menu {
+                ul {
+                    li{
+                        a{
+                            padding-right: 40px;
+                            
+                            .check-mark{
+                                display: inline-block;
+                                position: absolute;
+                                right: 10px;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto 0;
+                                @include fix-width-height(18px);
+                                background-color: transparent;
+                                @include transition-three;
+
+                                &::after{
+                                    @include before-aftre-fill;
+                                    opacity:0;
+                                    border: none;
+                                    @include rotate(0deg);
+                                    @include transition-three;
+                                }
+                            }
+                            &:hover{
+                                .check-mark{
+                                    border-color: $white;
+                                }
+                            }
+                            &.selected{
+                                .check-mark{
+                                    border-color: $white;
+                                    &::after{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+    
+    

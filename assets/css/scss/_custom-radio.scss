@@ -1,0 +1,57 @@
+.custom-radio {
+    display: inline-flex;
+    gap: 16px;
+
+    .radio-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        color: $secondary;
+        user-select: none;
+
+        // &:has(input:checked){
+        //     color: $red;
+        // }
+
+        input {
+            width: 100%;
+            height: 18px;
+            opacity: 0;
+            cursor: pointer;
+            position: absolute;
+
+            &:checked ~ .checkmark {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &:checked ~ .label-text {
+                color: red;
+            }
+        }
+
+        .checkmark {
+            @include flex-all-center;
+            position: relative;
+            @include fix-width-height(18px);
+            background-color: #fff;
+            border: 1px solid $secondary;
+            @include border-radius(50%);
+            @include transition-three;
+
+            &::after {
+                @include before-after;
+                opacity: 0;
+                @include fix-width-height(8px);
+                background: $secondary;
+                margin: auto;
+                @include border-radius(50%);
+                @include transition-three;
+            }
+        }
+    }
+}

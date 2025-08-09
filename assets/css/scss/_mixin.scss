@@ -1,0 +1,281 @@
+
+@mixin background-opacity($color, $opacity) {
+    background: rgba($color, $opacity);
+}
+
+@mixin color-opacity($color, $opacity) {
+    color: rgba($color, $opacity);
+}
+
+/*============  Border Radius Property Mixin Here    =============*/
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+  
+@mixin border-radius-all($radiusTop, $radiusRight, $radiusBottom, $radiusLeft) {
+    -webkit-border-radius: $radiusTop $radiusRight $radiusBottom $radiusLeft;
+    -moz-border-radius: $radiusTop $radiusRight $radiusBottom $radiusLeft;
+    -ms-border-radius: $radiusTop $radiusRight $radiusBottom $radiusLeft;
+    border-radius: $radiusTop $radiusRight $radiusBottom $radiusLeft;
+    -o-border-radius: $radiusTop $radiusRight $radiusBottom $radiusLeft;
+}
+
+/*============  Flex Property Mixin Here    =============*/
+
+@mixin flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-v-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-h-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin flex-inline-all-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-inline-center {
+    display: inline-flex;
+    align-items: center;
+}
+
+/*============  Grid Property Mixin Here    =============*/
+@mixin grid-two{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin grid-three{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid-four{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+@mixin grid-five{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin grid-six{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/*============  Transition Property Mixin Here    =============*/
+
+@mixin transition-three {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+/*============  Transform Property Mixin Here    =============*/
+
+@mixin rotate-x($deg) {
+    transform: rotateX($deg);
+    -webkit-transform: rotateX($deg);
+    -moz-transform: rotateX($deg);
+    -ms-transform: rotateX($deg);
+    -o-transform: rotateX($deg);
+}
+
+@mixin rotate-y($deg) {
+    transform: rotateY($deg);
+    -webkit-transform: rotateY($deg);
+    -moz-transform: rotateY($deg);
+    -ms-transform: rotateY($deg);
+    -o-transform: rotateY($deg);
+}
+  
+@mixin rotate($deg) {
+    transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+}
+
+@mixin transform($angle1, $angle2) {
+    transform: translate($angle1, $angle2);
+    -webkit-transform: translate($angle1, $angle2);
+    -moz-transform: translate($angle1, $angle2);
+    -ms-transform: translate($angle1, $angle2);
+    -o-transform: translate($angle1, $angle2);
+}
+
+@mixin transform-x($angle) {
+    transform: translateX($angle);
+    -webkit-transform: translateX($angle);
+    -moz-transform: translateX($angle);
+    -ms-transform: translateX($angle);
+    -o-transform: translateX($angle);
+}
+
+@mixin transform-y($angle) {
+    transform: translateY($angle);
+    -webkit-transform: translateY($angle);
+    -moz-transform: translateY($angle);
+    -ms-transform: translateY($angle);
+    -o-transform: translateY($angle);
+}
+
+/*============  Before/After Property Mixin Here    =============*/
+
+@mixin tblr{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+@mixin tblr-fill{
+    @include tblr;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin before-after {
+    content: " ";
+    position: absolute;
+}
+
+@mixin before-aftre-fill{
+    @include before-after;
+    @include tblr-fill;
+}
+
+@mixin absolute-tblr{
+    position: absolute;
+    @include tblr-fill;
+}
+
+/*============  Border/Outline/Shadow/Text-Decoration Property Mixin Here    =============*/
+
+@mixin out-shadow-none{
+    outline: none;
+    box-shadow: inherit;
+
+    &:focus, &:hover{
+        outline: none;
+        box-shadow: inherit;
+    }
+}
+
+@mixin border-out-shadow-none{
+    outline: none;
+    box-shadow: inherit;
+    border: none;
+    
+    &:focus, &:hover{
+        border: none;
+        outline: none;
+        box-shadow: inherit;
+    }
+}
+
+@mixin list-style-decoration{
+    list-style: none;
+    text-decoration: none;
+}
+
+@mixin border-out-shadow-decoration-none{
+    border: none;
+    outline: none;
+    box-shadow: inherit;
+    text-decoration: none;
+    list-style: none;
+    
+    &:focus, &:hover{
+        border: none;
+        outline: none;
+        box-shadow: inherit;
+        text-decoration: none;
+        list-style: none;
+    }
+}
+
+/*============  Fix Widht/Height Property Mixin Here    =============*/
+@mixin fix-width-height($fixvalue){
+    width: $fixvalue;
+    min-width: $fixvalue;
+    height: $fixvalue;
+    min-height: $fixvalue;
+}
+
+/*============  Text Ellipsis Property Mixin Here    =============*/
+@mixin text-ellipsis-line($linenum){
+    display: -webkit-box;
+    -webkit-line-clamp: $linenum;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*============  Input Placeholder Color Mixin Here    =============*/
+@mixin input-placeholder-color($colorcode){
+    &::-webkit-input-placeholder{color: $colorcode;}
+    &::-moz-placeholder{color: $colorcode;}
+    &:-ms-input-placeholder{color: $colorcode;}
+    &:-moz-placeholder{color: $colorcode;}
+    &::placeholder{color: $colorcode;}
+}
+
+@mixin scroll-bar {
+    &::-webkit-scrollbar {width: 8px;}
+    &::-webkit-scrollbar:horizontal {height: 6px;}
+    &::-webkit-scrollbar-thumb {background-color: rgba($black, 0.5);border-radius: 4px;}
+    &::-webkit-scrollbar-track {background-color: transparent;}
+}
+
+
+
+@mixin row($column-count, $row-gap, $column-gap) {
+    @include flexbox;
+    flex-wrap: wrap;
+    gap: $row-gap $column-gap;
+    > * {
+        flex: 0 0 calc((100% / $column-count) - ($column-gap - (($column-gap / $column-count))));
+        width: calc((100% / $column-count) - ($column-gap - (($column-gap / $column-count))));
+    }
+}

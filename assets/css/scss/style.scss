@@ -1,0 +1,10 @@
+
+// Compile the SCSS file into a minified CSS file using the command:
+// sass assets/css/scss/style.scss:assets/css/style.css
+
+@import "variables";
+@import "mixin";
+
+@import "common";
+
+

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!--  Favicon Icon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <!--  Title Name  -->
+    <title>Common Components</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
+
+    <!-- Bootstrap SelectPicker CSS -->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap-select.min.css">
+
+    <!-- Select2 SelectPicker CSS-->
+    <link rel="stylesheet" href="assets/css/libs/select2.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/common.css">
+</head>
+<body>
+    <div class="container my-4">
+
+        <!-- Notification & User Profile Dropdown --> 
+        <div class="components-title">
+            <span>Notification Dropdown Code here</span>
+            <span>User Profile Dropdown Code here</span>
+        </div>
+        <div class="flex-between">
+            <div class="notification-dropdown">
+                <button class="notification-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <picture><img src="assets/images/notification-icon.svg" alt="Notification Icon" width="20px" height="20px"></picture>
+                    <span class="badge">3</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-start">
+                    <div class="dropdown-header">
+                        <span>Notifications</span>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <ul class="notification-list">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    <div class="view-all-wrap">
+                        <a href="#" class="view-all">View All Notification</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="user-dropdown">
+                <button class="user-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <picture class="user-img"><img src="assets/images/user.webp" alt="User Icon" width="" height=""></picture>
+                    <span class="user-name">Charles Loftin</span>
+                    <picture class="dropdown-icon"><img src="assets/images/dropdown-icon.svg" alt="Dropdown Icon"></picture>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#"><picture><img src="assets/images/my-account-icon.svg" alt="My Account" width="20px" height="20px"></picture>My Account</a></li>
+                    <li><a class="dropdown-item" href="#"><picture><img src="assets/images/about-icon.svg" alt="About Us" width="20px" height="20px"></picture>About Us</a></li>
+                    <li><a class="dropdown-item" href="#"><picture><img src="assets/images/contact-us-icon.svg" alt="Contact Us" width="20px" height="20px"></picture>Contact Us</a></li>
+                    <li><a class="dropdown-item" href="#"><picture><img src="assets/images/change-password-icon.svg" alt="Change Password" width="20px" height="20px"></picture>Change Password</a></li>
+                    <li><button type="button" class="dropdown-item"><picture><img src="assets/images/logout-icon.svg" alt="Logout" width="20px" height="20px"></picture>Logout</button></li>
+                    <li><button type="button" class="dropdown-item"><picture><img src="assets/images/delete-account-icon.svg" alt="Delete Account" width="20px" height="20px"></picture>Delete Account</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Button Code-->
+        <h2 class="components-title">Primary and Secondary Button</h2>
+        <div class="button-group">
+            <button type="button" class="common-btn primary-btn">Primary</button>
+            <button type="button" class="common-btn secondry-btn">Secondry</button>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Bootstap SelectPicker Code -->
+        <h2 class="components-title">Bootstap SelectPicker Code</h2>
+        <div class="selected-box">
+            <div>
+                <select class="selectpicker" name="selectoption" title="Choose one of the Following..." data-live-search="true">
+                    <option value="Option1">Select Option item 1</option>
+                    <option value="Option2">Select Option item 2</option>
+                    <option value="Option3">Select Option item 3</option>
+                    <option value="Option4">Select Option item 4</option>
+                </select>
+            </div>
+
+            <div>
+                <select class="selectpicker show-tick checkbox-select" name="selectoption" title="Choose one of the Checkbox Type..">
+                    <option value="Option1">Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1</option>
+                    <option value="Option2">Select Option item 2</option>
+                    <option value="Option3">Select Option item 3</option>
+                    <option value="Option4">Select Option item 4</option>
+                </select>
+            </div>
+
+            <div>
+                <select class="selectpicker show-tick radio-select" name="selectoption" title="Choose one of the Radio Button Type...">
+                    <option value="Option1">Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1 Select Option item 1</option>
+                    <option value="Option2">Select Option item 2</option>
+                    <option value="Option3">Select Option item 3</option>
+                    <option value="Option4">Select Option item 4</option>
+                </select>
+            </div>
+
+            <div>
+                <select class="selectpicker checkbox-select" name="selectoption" multiple title="Choose Multiple Following...">
+                    <option value="Option1">Select Option item 1</option>
+                    <option value="Option2">Select Option item 2</option>
+                    <option value="Option3">Select Option item 3</option>
+                    <option value="Option4">Select Option item 4</option>
+                    <option value="Option4">Select Option item 5</option>
+                    <option value="Option4">Select Option item 6</option>
+                    <option value="Option4">Select Option item 7</option>
+                </select>
+            </div>
+            <div>
+                <select class="selectpicker" name="countrynamefleg" title="Select Country name with Flag">
+                    <option data-content='<img src="https://flagcdn.com/w40/in.png"> India'>India</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/us.png"> United States'>United States</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/gb.png"> United Kingdom'>United Kingdom</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/fr.png"> France'>France</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/au.png"> Australia'>+Australia</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/ca.png"> Canada'>Canada</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/de.png"> Germany'>Germany</option>
+                </select>
+            </div>
+            <div>
+                <select class="selectpicker" name="countrycodefleg" title="Select Country Code with Flag">
+                    <option data-content='<img src="https://flagcdn.com/w40/in.png"> (+91)' value="+91">+91</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/us.png"> (+1)' value="+1">+1</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/gb.png"> (+44)' value="+44">+44</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/fr.png"> (+991)' value="+991">+991</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/au.png"> (+61)' value="+61">+61</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/ca.png"> (+1)' value="+1">+1</option>
+                    <option data-content='<img src="https://flagcdn.com/w40/de.png"> (+45)' value="+45">+45</option>
+                </select>
+
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Select2 SelectPicker Code -->
+        <h2 class="components-title">
+            <span>Select2 SelectPicker Code</span>
+            <span>Select2 Multiple SelectPicker Code</span>
+        </h2>
+        <div class="flex-between">
+            <div class="select2-box">
+                <select class="select2-selectpicker" data-placeholder="Select2 Selectpicker Following here...">
+                    <option disabled selected></option> <!-- This enables placeholder -->
+                    <option value="Option1">Select2 SelectPicker Option item 1</option>
+                    <option value="Option2">Select2 SelectPicker Option item 2</option>
+                    <option value="Option3">Select2 SelectPicker Option item 3</option>
+                    <option value="Option4">Select2 SelectPicker Option item 4</option>
+                    <option value="Option4">Select2 SelectPicker Option item 5</option>
+                    <option value="Option4">Select2 SelectPicker Option item 6</option>
+                    <option value="Option4">Select2 SelectPicker Option item 7</option>
+                    <option value="Option4">Select2 SelectPicker Option item 8</option>
+                    <option value="Option4">Select2 SelectPicker Option item 9</option>
+                </select>   
+            </div>
+
+            <div class="select2-box">
+                <select class="select2-selectpicker" data-placeholder="Select2 Multiple Selectpicker Following here..." multiple="multiple">
+                    <option value="Option1">Select2 SelectPicker Option item 1</option>
+                    <option value="Option2">Select2 SelectPicker Option item 2</option>
+                    <option value="Option3">Select2 SelectPicker Option item 3</option>
+                    <option value="Option4">Select2 SelectPicker Option item 4</option>
+                    <option value="Option4">Select2 SelectPicker Option item 5</option>
+                    <option value="Option4">Select2 SelectPicker Option item 6</option>
+                    <option value="Option4">Select2 SelectPicker Option item 7</option>
+                    <option value="Option4">Select2 SelectPicker Option item 8</option>
+                    <option value="Option4">Select2 SelectPicker Option item 9</option>
+                </select>   
+            </div>
+
+            <div class="select2-box">
+                <select id="countrySelectImg" style="width: 100%">
+                    <option></option>
+                    <option value="in" data-flag="https://flagcdn.com/w40/in.png">India</option>
+                    <option value="us" data-flag="https://flagcdn.com/w40/us.png">United States</option>
+                    <option value="gb" data-flag="https://flagcdn.com/w40/gb.png">United Kingdom</option>
+                    <option value="fr" data-flag="https://flagcdn.com/w40/fr.png">France</option>
+                    <option value="au" data-flag="https://flagcdn.com/w40/au.png">Australia</option>
+                    <option value="ca" data-flag="https://flagcdn.com/w40/ca.png">Canada</option>
+                    <option value="de" data-flag="https://flagcdn.com/w40/de.png">Germany</option>
+                </select>
+            </div>
+
+            <div class="select2-box">
+                <select id="countrySelectcode" style="width: 100%">
+                    <option></option>
+                    <option data-flag="https://flagcdn.com/w40/in.png" value="+91">(+91)</option>
+                    <option data-flag="https://flagcdn.com/w40/us.png" value="+1">(+1)</option>
+                    <option data-flag="https://flagcdn.com/w40/gb.png" value="+44">(+44)</option>
+                    <option data-flag="https://flagcdn.com/w40/fr.png" value="+991">(+991)</option>
+                    <option data-flag="https://flagcdn.com/w40/au.png" value="+61">(+61)</option>
+                    <option data-flag="https://flagcdn.com/w40/ca.png" value="+1">(+1)</option>
+                    <option data-flag="https://flagcdn.com/w40/de.png" value="+45">(+45)</option>
+                </select>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Custom Radio Code -->
+        <h2 class="components-title">Custom Radio Button</h2>
+        <div class="custom-radio">
+            <label class="radio-btn">
+                <input type="radio" name="radio" checked=""/>
+                <span class="checkmark"></span>
+                Custom Radio button text here
+            </label>
+            <label class="radio-btn">
+                <input type="radio" name="radio" />
+                <span class="checkmark"></span>
+                <span class="label-text">Custom Radio button text here</span>
+            </label>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Custom Checkbox Code -->
+        <h2 class="components-title">Custom Checkbox Button</h2>
+        <div class="custom-checkbox">
+            <label class="checkbox-btn">
+                <input type="checkbox" checked="" name="checkbox-one">
+                <span class="checkmark"></span>
+                <span class="label-text">Custom checkbox text here</span>
+            </label>
+            <label class="checkbox-btn">
+                <input type="checkbox" name="checkbox-two">
+                <span class="checkmark"></span>
+                Custom checkbox text here
+            </label>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Tabing  Code -->
+        <h2 class="components-title">Bootstrap Tabing Demo</h2>
+        <ul class="nav tabing-nav">
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-home">Home</div>
+            <div class="tab-pane fade" id="pills-profile">Profile</div>
+            <div class="tab-pane fade" id="pills-contact">Contact</div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Text Ellipsis Code -->
+        <h2 class="components-title">Text Ellipsis Demo</h2>
+        <div class="text-ellipsis">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet neque officia repellendus non, delectus assumenda vel qui ipsa consequuntur vitae. Doloribus, cum! Obcaecati cum quo at! Soluta accusantium id reprehenderit doloremque, quam necessitatibus dolorum in natus deleniti repellendus quibusdam dolor itaque unde hic saepe, sed quidem fugit laudantium facere corporis reiciendis veniam? Eos dolorum error officia. Molestiae, ratione. Necessitatibus, porro.</p>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Search Box Code -->
+        <h2 class="components-title">Search Box Code here</h2>
+        <div class="flex-between">
+            <div class="search-box">
+                <input type="text" class="search-control" placeholder="Search...">
+                <button class="search-btn" type="button"><picture><img src="assets/images/search-icon.svg" alt="Search Icon" width="20" height="21"></picture></button>
+            </div>
+
+            <div class="search-box-buton">
+                <input type="text" class="search-control" placeholder="Search...">
+                <button class="search-btn" type="button"><picture><img src="assets/images/search-icon.svg" alt="Search Icon" width="20" height="21"></picture></button>
+            </div>
+        </div>
+        
+
+        <hr class="my-4">
+
+        <!-- Breadcrumb Code -->
+        <h2 class="components-title">Custom Breadcrumb Code here</h2>
+        <ol class="custom-breadcrumb">
+            <li class="bcrumb-item"><a href="#">Home</a></li>
+            <li class="bcrumb-item"><a href="#">About</a></li>
+            <li class="bcrumb-item active" aria-current="page">Contect Us</li>
+        </ol>
+
+        <hr class="my-4">
+
+        <!-- Button trigger modal -->
+        <h2 class="components-title">Common Modal Code here</h2>
+        <button type="button" class="common-btn primary-btn" data-bs-toggle="modal" data-bs-target="#CommonModal">
+            Common Modal Demo
+        </button>
+
+        <button type="button" class="common-btn secondry-btn" data-bs-toggle="modal" data-bs-target="#noheaderModal">
+            No Header Modal Demo
+        </button>
+
+        <!-- Common Modal -->
+        <div class="modal fade common-modal" id="CommonModal" tabindex="-1" aria-labelledby="CommonModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-center" style="max-width: calc(600px + 30px);">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Modal title</h2>
+                        <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, incidunt expedita numquam perferendis asperiores, et iusto molestias, distinctio voluptates vitae nostrum nemo recusandae mollitia reiciendis ipsum ratione eaque. Facilis, explicabo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo facilis autem nam ut exercitationem minima, rerum reprehenderit animi voluptatibus aspernatur ullam recusandae nostrum dolores doloremque aut doloribus accusamus assumenda aperiam?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="common-btn secondry-btn" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="common-btn primary-btn">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Header Modal -->
+        <div class="modal fade common-modal no-header" id="noheaderModal" tabindex="-1" aria-labelledby="noheaderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-center" style="max-width: calc(600px + 30px);">
+                <div class="modal-content">
+                    <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, incidunt expedita numquam perferendis asperiores, et iusto molestias, distinctio voluptates vitae nostrum nemo recusandae mollitia reiciendis ipsum ratione eaque. Facilis, explicabo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo facilis autem nam ut exercitationem minima, rerum reprehenderit animi voluptatibus aspernatur ullam recusandae nostrum dolores doloremque aut doloribus accusamus assumenda aperiam?</p>
+                        <div class="custom-checkbox mt-3">
+                            <label class="checkbox-btn">
+                                <input type="checkbox" name="checkbox-two">
+                                <span class="checkmark"></span>
+                                Custom checkbox text here
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="common-btn secondry-btn" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="common-btn primary-btn">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Bootstrap Accordion Code -->
+        <h2 class="components-title">Bootstrap Accordion Code here</h2>
+        <div class="accordion" id="accordionExample">
+            <div class="faq-item">
+                <div class="faq-item-header" id="headingOne" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Bootstrap Accordion Item #1
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div id="collapseOne" class="faq-body collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="faq_body_inner">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, saepe! Fuga quasi sunt excepturi deserunt facilis consectetur quis asperiores. Et numquam officia a quia incidunt magnam eos iste nihil error.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, saepe! Fuga quasi sunt excepturi deserunt facilis consectetur quis asperiores. Et numquam officia a quia incidunt magnam eos iste nihil error.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-item-header" id="headingTwo" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Bootstrap Accordion Item #2
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div id="collapseTwo" class="faq-body collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="faq_body_inner">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum pariatur rem fuga reprehenderit, quos eveniet sunt distinctio recusandae accusamus tempora minima quam aut voluptas iure praesentium ut nisi laboriosam sequi dolor saepe suscipit! Impedit illo neque harum natus, accusamus voluptas ex consequuntur aut, vero, ut corrupti? Veritatis ducimus culpa repellat fuga minima! Aut libero earum amet, inventore vero officiis in consectetur at quibusdam doloremque excepturi,</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum pariatur rem fuga reprehenderit, quos eveniet sunt distinctio recusandae accusamus tempora minima quam </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-item-header" id="headingThree" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Bootstrap Accordion Item #3
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div id="collapseThree" class="faq-body collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="faq_body_inner">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum quia dolores, sequi ipsam magnam molestiae quidem dolore fugit earum. Quisquam quis tempora vitae neque doloremque! Perspiciatis sed nobis culpa, corporis architecto alias aspernatur distinctio a fugit. Quo ex sapiente quaerat, perferendis et minima consequuntur, similique quia inventore iusto hic!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum natus repellendus labore inventore porro, voluptatem esse exercitationem in laboriosam facere perspiciatis minus mollitia impedit omnis suscipit harum itaque quod ut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Custom FAQ Accordion Code -->
+        <h2 class="components-title">Custom FAQ Accordion Code here</h2>
+        <ul id="CustomAccordion" class="accordion">
+            <li class="faq-item">
+                <div class="faq-item-header active">
+                    Custom Accordion Item #1
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div class="faq_body">
+                    <div class="faq_body_inner">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad odio nihil magnam ullam at voluptatum impedit! Aliquid magnam blanditiis omnis et quos, beatae est inventore, neque autem quae corporis molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, minima sint corrupti officia sunt obcaecati eos quas impedit saepe consequatur eveniet natus aspernatur modi repudiandae aut ad porro libero iste!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum natus repellendus labore inventore porro, voluptatem esse exercitationem in laboriosam facere perspiciatis minus mollitia impedit omnis suscipit harum itaque quod ut.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-item-header">
+                    Custom Accordion Item #2
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div class="faq_body" style="display: none;">
+                    <div class="faq_body_inner">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sint dolores ipsum nesciunt iure sapiente cupiditate, nihil, necessitatibus nam beatae doloribus nisi. Est sed, aliquam, atque ullam voluptatem praesentium laboriosam, maxime nihil accusantium voluptatum nisi harum at tempore id aut cupiditate porro libero? Harum, hic atque odit quisquam voluptate temporibus at voluptatum fuga distinctio eaque asperiores minus numquam accusamus reiciendis libero minima voluptas! Odio omnis doloribus iure enim dicta expedita atque accusantium sunt quos eligendi maxime laudantium, nemo voluptatibus possimus labore mollitia architecto! Reiciendis eveniet, laudantium debitis odit perspiciatis ut necessitatibus voluptate voluptatum quibusdam optio nulla voluptas non error animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorum quia dolores, sequi ipsam magnam molestiae quidem dolore fugit earum. Quisquam quis tempora vitae neque doloremque! Perspiciatis sed nobis culpa, corporis architecto alias aspernatur distinctio a fugit. Quo ex sapiente quaerat, perferendis et minima consequuntur, similique quia inventore iusto hic!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-item-header">
+                    Custom Accordion Item #3
+                    <span class="pluse-mins-icon"></span>
+                    <span class="angle-icon"></span>
+                </div>
+                <div class="faq_body" style="display: none;">
+                    <div class="faq_body_inner">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, dolorum cumque! Numquam est excepturi eum atque et sint iure totam dolor animi molestias. Impedit, labore voluptatem ducimus dolorem veniam deserunt libero exercitationem fuga omnis quos ratione expedita consequuntur porro dolor officia facilis. Impedit modi dolores iste voluptatum neque adipisci perferendis aspernatur eius dignissimos, veniam repudiandae at unde. Quas dolores accusantium maxime esse magnam, voluptatem nobis consequuntur ad mollitia temporibus! Fugiat.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        <hr class="my-4">
+        
+
+    </div>
+
+    <!-- Jquery, Bootstrap, Bootstrap-Select, Select2 JS    -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+
+    <!--    Custom js   -->
+    <script src="assets/js/custom.js"></script>
+    
+</body>
+</html>

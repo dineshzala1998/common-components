@@ -1,0 +1,346 @@
+/*  Font Family Variables */
+/*  Font Weight Variables */
+/*  Font Size Variables */
+/* Line Height Variables */
+/*  Color Variables  */
+/*============  Border Radius Property Mixin Here    =============*/
+/*============  Flex Property Mixin Here    =============*/
+/*============  Grid Property Mixin Here    =============*/
+/*============  Transition Property Mixin Here    =============*/
+/*============  Transform Property Mixin Here    =============*/
+/*============  Before/After Property Mixin Here    =============*/
+/*============  Border/Outline/Shadow/Text-Decoration Property Mixin Here    =============*/
+/*============  Fix Widht/Height Property Mixin Here    =============*/
+/*  Font Family Variables */
+/*  Font Weight Variables */
+/*  Font Size Variables */
+/* Line Height Variables */
+/*  Color Variables  */
+/*============  Border Radius Property Mixin Here    =============*/
+/*============  Flex Property Mixin Here    =============*/
+/*============  Grid Property Mixin Here    =============*/
+/*============  Transition Property Mixin Here    =============*/
+/*============  Transform Property Mixin Here    =============*/
+/*============  Before/After Property Mixin Here    =============*/
+/*============  Border/Outline/Shadow/Text-Decoration Property Mixin Here    =============*/
+/*============  Fix Widht/Height Property Mixin Here    =============*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  font-weight: 400;
+  text-align: left;
+}
+
+a {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+a:focus, a:hover {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+button, .btn {
+  outline: none;
+  box-shadow: inherit;
+}
+button:focus, button:hover, .btn:focus, .btn:hover {
+  outline: none;
+  box-shadow: inherit;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  min-width: auto;
+  height: auto;
+  max-width: 100%;
+  min-height: auto;
+}
+
+picture {
+  display: inline-block;
+  line-height: 0;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*========== Button Css Start here  ============*/
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.common-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.common-btn.primary-btn {
+  background-color: #32AE59;
+  border-color: #32AE59;
+  color: #FFFFFF;
+}
+.common-btn.primary-btn:hover {
+  background-color: #204C65;
+  border-color: #204C65;
+}
+.common-btn.secondry-btn {
+  background-color: transparent;
+  border-color: #204C65;
+  color: #204C65;
+}
+.common-btn.secondry-btn:hover {
+  background-color: #32AE59;
+  border-color: #32AE59;
+  color: #FFFFFF;
+}
+
+/*========== Custome Radio Button Css Start here  ============*/
+.custom-radio {
+  display: inline-flex;
+  gap: 16px;
+}
+.custom-radio .radio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #204C65;
+  user-select: none;
+}
+.custom-radio .radio-btn input {
+  width: 100%;
+  height: 18px;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.custom-radio .radio-btn input:checked ~ .checkmark::after {
+  opacity: 1;
+}
+.custom-radio .radio-btn input:checked ~ .label-text {
+  color: red;
+}
+.custom-radio .radio-btn .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  background-color: #fff;
+  border: 1px solid #204C65;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.custom-radio .radio-btn .checkmark::after {
+  content: " ";
+  position: absolute;
+  opacity: 0;
+  width: 8px;
+  min-width: 8px;
+  height: 8px;
+  min-height: 8px;
+  background: #204C65;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+/*========== Custome Checkbox Button Css Start here  ============*/
+.custom-checkbox {
+  display: inline-flex;
+  gap: 16px;
+}
+.custom-checkbox .checkbox-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: #204C65;
+  user-select: none;
+}
+.custom-checkbox .checkbox-btn input {
+  width: 100%;
+  height: 18px;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+}
+.custom-checkbox .checkbox-btn input:checked ~ .checkmark {
+  background: #204C65;
+  border-color: #204C65;
+}
+.custom-checkbox .checkbox-btn input:checked ~ .checkmark::after {
+  opacity: 1;
+}
+.custom-checkbox .checkbox-btn input:checked ~ .label-text {
+  color: red;
+}
+.custom-checkbox .checkbox-btn .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  background-color: #fff;
+  border: 1px solid #204C65;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.custom-checkbox .checkbox-btn .checkmark::after {
+  content: " ";
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 11px;
+  height: 6px;
+  opacity: 0;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+/*========== Tabing Css Start here  ============*/
+.tabing-nav {
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+.tabing-nav .nav-link {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 8px 20px;
+  text-align: center;
+  color: #204C65;
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.tabing-nav .nav-link:focus, .tabing-nav .nav-link:hover {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+.tabing-nav .nav-link.active, .tabing-nav .nav-link:hover {
+  background-color: #32AE59;
+  color: #FFFFFF;
+}
+
+.mai-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

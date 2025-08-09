@@ -1,0 +1,39 @@
+.button-group{
+    @include flex-v-center;
+    gap: 16px;
+}
+
+.common-btn{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: $f-r;
+    line-height: $lhight-20;
+    font-weight: $w-medium;
+    border: 1px solid;
+    @include transition-three;
+    @include border-radius(12px);
+
+    &.primary-btn{
+        background-color: $primery;
+        border-color: $primery;
+        color: $white;
+
+        &:hover{
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    &.secondry-btn{
+        background-color: transparent;
+        border-color: $secondary;
+        color: $secondary;
+
+        &:hover{
+            background-color: $primery;
+            border-color: $primery;
+            color: $white;
+        }
+    }
+}

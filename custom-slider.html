@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!--  Favicon Icon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+
+    <!--  Title Name  -->
+    <title></title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <style>
+        /* slider */
+.slider {
+    height: 400px;
+}
+
+/* slider-cards */
+.slide-card {
+    width: 300px;
+}
+@media only screen and (max-width:991px){
+.slide-card {
+    width: 250px;
+}
+}
+
+/* slider-arrows */
+.arrow {
+    width: 40px;
+    height: 40px;
+}
+
+/* disabled button */
+.bg-disabled {
+    background-color: #e5e3e7;
+}
+
+/* slider and slide transitions */
+.slider-move-left {
+    transform: translate(-316px, 0px);
+    transition: all 0.5s ease;
+}
+
+.move-left {
+    transform: translate(-316px, 0px);
+    transition: all 0.5s ease;
+}
+
+.move-right {
+    transform: translate(316px, 0px);
+    transition: all 0.5s ease;
+}
+main{
+    overflow: hidden;
+}
+.slider-wrap{
+    transition: transform 0.5s ease;
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+}
+    </style>
+  </head>
+  <body class="p-4">
+    <h1 class="head mb-4">Hello, world!</h1>
+
+       <main>
+        <!-- Slider -->
+        <section class="bg-light p-md-2 p-0 vh-100">
+            <h3 class="text-center">
+                Javascript Custom Slider
+            </h3>
+            <div class="text-muted text-center">Slide items one by one with an infinite loop. Responsive for all
+                screens.</div>
+          <div class="container position-relative">
+            <!-- Cards Wrap -->
+            <div class="slider d-flex align-items-center justify-content-start position-relative">
+                <div class="slider-wrap d-flex align-items-center position-absolute">
+                    <div class="slide-card 1 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/wv0j2bCB/slide-1.jpg" alt="slide" width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 1</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 2 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/Y00qsz7z/slide-2.jpg " alt="slide" width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 2</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 3 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/PJ7rsvrs/slide-3.jpg" alt="slide" width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 3</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 4 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/jdWS6cZs/slide-4.jpg" width="100%" width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 4</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 5 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/wv0j2bCB/slide-1.jpg" alt="slide" width="100%" width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 5</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 6 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/Y00qsz7z/slide-2.jpg" alt="slide" width="100%"
+                                width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 6</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 7 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/PJ7rsvrs/slide-3.jpg" alt="slide" width="100%"
+                                width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 7</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="slide-card 8 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/jdWS6cZs/slide-4.jpg" alt="slide" width="100%"
+                                width="100%">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 8</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                    aperiam
+                                    ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider Arrows -->
+            <!-- Previous Arrow -->
+            <button
+                class="text-dark arrow bg-white d-flex align-items-center justify-content-center shadow-lg border rounded-circle position-absolute bottom-50 start-0"
+                id="previous-arrow" onclick="previousSlide()">
+                <div>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+            </button>
+            <!-- Next Arrow -->
+            <button
+                class="text-dark arrow bg-white d-flex align-items-center justify-content-center shadow-lg border rounded-circle position-absolute bottom-50 end-0"
+                id="next-arrow" onclick="nextSlide()">
+                <div>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+            </button>
+        </div>
+        </section>
+    </main>
+
+    <!-- Popper and Bootstrap JS    -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!--    Custom js   -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.slider-wrap');
+    const slides = document.querySelectorAll('.slide-card');
+    const nextBtn = document.getElementById('next-arrow');
+    const prevBtn = document.getElementById('previous-arrow');
+
+    const slideWidth = slides[0].offsetWidth + 16;
+    const totalSlides = slides.length;
+    const visibleSlides = Math.floor(document.querySelector('.slider').offsetWidth / slideWidth);
+
+    let currentSlide = 0;
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+
+    function updateSlider() {
+      const maxSlide = totalSlides - visibleSlides;
+      const offset = -currentSlide * slideWidth;
+      track.style.transform = `translateX(${offset}px)`;
+
+      // Disable buttons
+      prevBtn.disabled = currentSlide === 0;
+      nextBtn.disabled = currentSlide >= maxSlide;
+
+      // Styles
+      prevBtn.classList.toggle("bg-disabled", prevBtn.disabled);
+      nextBtn.classList.toggle("bg-disabled", nextBtn.disabled);
+
+      prevBtn.querySelector('i').style.color = prevBtn.disabled ? "#c5c5c5" : "#212529";
+      nextBtn.querySelector('i').style.color = nextBtn.disabled ? "#c5c5c5" : "#212529";
+    }
+
+    nextBtn.addEventListener('click', () => {
+      const maxSlide = totalSlides - visibleSlides;
+      if (currentSlide < maxSlide) {
+        currentSlide++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlider();
+      }
+    });
+
+    // ----- MOUSE DRAG EVENTS -----
+    track.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      track.style.transition = 'none';
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const currentX = e.clientX;
+      const deltaX = currentX - startX;
+      track.style.transform = `translateX(${ -currentSlide * slideWidth + deltaX }px)`;
+    });
+
+    track.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const endX = e.clientX;
+      const moved = endX - startX;
+
+      if (moved > 50 && currentSlide > 0) {
+        currentSlide--;
+      } else if (moved < -50 && currentSlide < totalSlides - visibleSlides) {
+        currentSlide++;
+      }
+      track.style.transition = 'transform 0.4s ease';
+      updateSlider();
+    });
+
+    track.addEventListener('mouseleave', () => {
+      if (isDragging) {
+        isDragging = false;
+        track.style.transition = 'transform 0.4s ease';
+        updateSlider();
+      }
+    });
+
+    // Prevent image dragging inside
+    slides.forEach(slide => {
+      slide.addEventListener('dragstart', e => e.preventDefault());
+    });
+
+    updateSlider();
+  });
+</script>
+
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,97 @@
+.common-modal{
+    .modal-dialog{
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+
+        &.modal-center{
+            @include flex-v-center;
+            min-height: 100%;
+        }
+    }
+    .modal-content{
+        @include border-radius(10px);
+        background-color: #fff;
+        box-shadow: 0px 0px 18px 0px #00000026;
+        border: none;
+        overflow: hidden;
+
+        .modal-header{
+            @include flex-center-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dee2e6;
+            @include border-radius(0px);
+
+            .modal-title{
+                font-size: 20px;
+                line-height: 24px;
+                color: $black;
+                // font-family: $secondary-font;
+                font-weight: $w-medium;
+            }
+        }
+
+        .close-modal{
+            position: relative;
+            @include fix-width-height(30px);
+            @include flex-all-center;
+            z-index: 9;
+            background: #f1eefd;
+            border: none;
+            @include transition-three;
+            @include border-radius(50%);
+            @include rotate(45deg);
+            box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.5);
+    
+            &::after, &::before{
+                @include before-after;
+                @include tblr;
+                margin: auto;
+                background: $secondary;
+            }
+            &::after{
+                width:50%;
+                height:1px;
+            }
+            &::before{
+                height:50%;
+                width: 1px;
+            }
+        }
+
+        .modal-body{
+            padding: 20px;
+            font-size: 16px;
+            line-height: 22px;
+            color: $black;
+            // font-family: $secondary-font;
+            font-weight: $w-regular;
+            
+        }
+
+        .modal-footer{
+            @include flex-center-between;
+            gap: 20px;
+            padding: 15px 20px;
+            border-top: 1px solid #dee2e6;
+            @include border-radius(0px);
+        }
+    }
+
+    &.no-header{
+        .modal-content{
+            position: relative;
+
+            .modal-body{
+                padding: 30px;
+            }
+            .close-modal{
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                z-index: 9;
+            }
+        }
+    }
+}
+

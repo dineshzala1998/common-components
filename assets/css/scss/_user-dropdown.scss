@@ -1,0 +1,88 @@
+.user-dropdown{
+    .user-toggle{
+        @include flex-v-center;
+        gap: 6px;
+        padding: 4px 8px;
+        background-color: transparent;
+        @include transition-three;
+        @include border-radius(5px);
+        border: 1px solid rgba($black, 0.4);
+        @include background-opacity(#eee, 0.5);
+
+        .user-img{
+            display: inline-block;
+            @include fix-width-height(40px);
+            @include border-radius(50%);
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .user-name{
+            display: inline-block;
+            font-size: 16px;
+            line-height: 20px;
+            // font-family: $secondary-font;
+            font-weight: $w-regular;
+            color: $black;
+        }
+        .dropdown-icon{
+            @include fix-width-height(20px);
+            @include flex-all-center;
+
+            img{
+                @include transition-three
+            }
+        }
+
+        &.show{
+            @include background-opacity(#eee, 1);
+            border-color: rgba($black, 0.9);;
+            
+            .dropdown-icon{
+                img{
+                    @include rotate-x(180deg);
+                }
+            }
+        }
+    }
+
+    .dropdown-menu{
+        padding: 0;
+        background-color: #fff;
+        @include border-radius(5px);
+        border: 1px solid rgba($black, 0.4);
+        min-width: 200px;
+        box-shadow: 0px 0px 18px 0px #00000026;
+        overflow: hidden;
+
+        li{
+            .dropdown-item{
+                @include out-shadow-none;
+                @include flex-v-center;
+                gap: 10px;
+                padding: 10px 15px;
+                font-size: 16px;
+                line-height: 20px;
+                // font-family: $secondary-font;
+                font-weight: $w-regular;
+                color: $black;
+                border-bottom: 1px solid rgba($black, 0.1);
+                @include transition-three;
+                background-color: transparent;
+
+                &:hover{
+                    @include background-opacity(#eee, 1);
+                }
+            }
+
+            &:last-child{
+                .dropdown-item{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
