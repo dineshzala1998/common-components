@@ -13,6 +13,8 @@
 /*============  Fix Widht/Height Property Mixin Here    =============*/
 /*============  Text Ellipsis Property Mixin Here    =============*/
 /*============  Input Placeholder Color Mixin Here    =============*/
+/*============  scroll-bar Mixin Here    =============*/
+/*============  Column Count Mixin Here    =============*/
 * {
   padding: 0;
   margin: 0;
@@ -95,6 +97,7 @@ picture {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  width: 100%;
 }
 .flex-between .user-dropdown {
   margin-left: auto;
@@ -105,6 +108,7 @@ picture {
   justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
+  width: 100%;
 }
 .selected-box > div {
   width: calc(50% - 15px);
@@ -660,6 +664,9 @@ picture {
 .select2-box .select2-selectpicker {
   width: 100%;
 }
+.select2-box .select2-container--default {
+  width: 100% !important;
+}
 .select2-box .select2-container--default .select2-selection {
   outline: none;
   box-shadow: inherit;
@@ -689,6 +696,12 @@ picture {
 .select2-box .select2-container--default .select2-selection .select2-selection__rendered .select2-selection__placeholder {
   font-weight: 400;
   color: rgba(32, 76, 101, 0.7);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 .select2-box .select2-container--default .select2-selection .select2-selection__rendered span img {
   width: 20px;
@@ -736,7 +749,13 @@ picture {
   margin-top: 0;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
 }
 .select2-box .select2-container--default .select2-selection .select2-search__field::-webkit-input-placeholder {
   color: rgba(32, 76, 101, 0.7);
@@ -1000,6 +1019,7 @@ picture {
   position: relative;
   cursor: pointer;
   font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
   color: #204C65;
   user-select: none;

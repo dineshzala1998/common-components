@@ -4,6 +4,7 @@
         width:100%;
     }
     .select2-container--default{
+        width: 100% !important;
         .select2-selection{
             @include out-shadow-none;
             border-radius: 10px !important;
@@ -18,13 +19,14 @@
                 padding: 0;
                 font-size: 16px;
                 line-height: 20px;
-                // font-family: $secondary-font;
+                // font-family: $primery-font;
                 font-weight: $w-medium;
                 color: $secondary;
 
                 .select2-selection__placeholder{
                     font-weight: $w-regular;
                     color: rgba($secondary, 0.7);
+                    @include text-ellipsis-line(1);
                 }
 
                 span{
@@ -61,7 +63,8 @@
                 margin-top: 0;
                 font-size: 16px;
                 line-height: 20px;
-                font-weight: 400;
+                font-weight: 300;
+                @include text-ellipsis-line(1);
                 @include input-placeholder-color(rgba($secondary, 0.7));
             }
 
@@ -97,7 +100,7 @@
                         .select2-selection__choice__display{
                             font-size: 14px;
                             line-height: 18px;
-                            // font-family: $secondary-font;
+                            // font-family: $primery-font;
                             font-weight: $w-regular;
                             color: $secondary;
                             padding: 0 4px;
@@ -139,7 +142,7 @@
                 padding: 8px 16px;
                 font-size: 16px;
                 line-height: 20px;
-                // font-family: $secondary-font;
+                // font-family: $primery-font;
                 font-weight: $w-regular;
                 color: $secondary;
                 border: 1px solid #ccc;
@@ -161,7 +164,7 @@
                     .select2-results__option{
                         font-size: 16px;
                         line-height: 20px;
-                        // font-family: $secondary-font;
+                        // font-family: $primery-font;
                         font-weight: $w-regular;
                         color: $secondary;
                         position: relative;

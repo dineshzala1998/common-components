@@ -3,14 +3,11 @@
     gap: 16px;
 
     .checkbox-btn{
-        display: inline-flex;
-        align-items: center;
+        @include flex-inline-center;
         gap: 8px;
         position: relative;
         cursor: pointer;
-        font-size: 16px;
-        font-weight: 400;
-        color: $secondary;
+        @include normal-text-regular;
         user-select: none;
 
         // &:has(input:checked){
