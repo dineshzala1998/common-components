@@ -280,6 +280,13 @@
     }
 }
 
+@mixin font-line-weight-regular {
+    font-size: 16px;
+    line-height: 22px;
+    // font-family: $primery-font;
+    font-weight: $w-regular;
+}
+
 @mixin normal-text-regular{
     font-size: 16px;
     line-height: 20px;
@@ -291,18 +298,17 @@
 @mixin normal-text-medium{
     font-size: 16px;
     line-height: 20px;
-    font-family: $primery-font;
+    // font-family: $primery-font;
     font-weight: $w-medium;
     color: $secondary;
 }
 
-@mixin input-box{
+@mixin input-box($bg-color, $bd-color) {
+    @include out-shadow-none;
     width: 100%;
     padding: 12px 16px;
-    background: #fff;
-    border: 1px solid #ccc;
-    @include normal-text-medium;
-    @include out-shadow-none;
+    background: $bg-color;
+    border: 1px solid $bd-color;
     @include border-radius(10px);
     @include transition-three;
 }

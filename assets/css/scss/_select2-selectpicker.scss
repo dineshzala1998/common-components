@@ -51,7 +51,6 @@
                     background: url('../../assets/images/dropdown-icon.svg') no-repeat center center;
                     background-size: contain;
                     @include transition-three;
-                    // transition: all 5s ease;
                     @include rotate-x(0deg);
                 }
                 b{
@@ -63,7 +62,7 @@
                 margin-top: 0;
                 font-size: 16px;
                 line-height: 20px;
-                font-weight: 300;
+                font-weight: 400;
                 @include text-ellipsis-line(1);
                 @include input-placeholder-color(rgba($secondary, 0.7));
             }

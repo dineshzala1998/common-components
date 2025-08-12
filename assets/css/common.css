@@ -182,7 +182,7 @@ picture {
 .user-dropdown .user-toggle .user-name {
   display: inline-block;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
   color: #000;
 }
@@ -234,7 +234,7 @@ picture {
   gap: 10px;
   padding: 10px 15px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
   color: #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -268,7 +268,6 @@ picture {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -317,6 +316,7 @@ picture {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  color: #204C65;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -333,6 +333,7 @@ picture {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  color: #204C65;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -355,10 +356,11 @@ picture {
   display: inline-block;
   text-align: center;
   padding: 10px 20px;
+  border: 1px solid;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
-  border: 1px solid;
+  color: #204C65;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -388,6 +390,253 @@ picture {
   background-color: #32AE59;
   border-color: #32AE59;
   color: #FFFFFF;
+}
+
+/*========== Common Input Box Css Start here  ============*/
+.common-form {
+  width: 100%;
+}
+.common-form .from-group {
+  width: 100%;
+  margin-bottom: 0px;
+  position: relative;
+  /* if label text short use this and change class name input-icon2*/
+  /* if label text short use this and change class name input-action2*/
+  /* Label Animated In Focus Css here..........*/
+}
+.common-form .from-group .form-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #204C65;
+}
+.common-form .from-group .form-control {
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #204C65;
+  outline: none;
+  box-shadow: inherit;
+  width: 100%;
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.common-form .from-group .form-control:focus, .common-form .from-group .form-control:hover {
+  outline: none;
+  box-shadow: inherit;
+}
+.common-form .from-group .form-control::-webkit-input-placeholder {
+  color: rgba(32, 76, 101, 0.7);
+}
+.common-form .from-group .form-control::-moz-placeholder {
+  color: rgba(32, 76, 101, 0.7);
+}
+.common-form .from-group .form-control:-ms-input-placeholder {
+  color: rgba(32, 76, 101, 0.7);
+}
+.common-form .from-group .form-control:-moz-placeholder {
+  color: rgba(32, 76, 101, 0.7);
+}
+.common-form .from-group .form-control::placeholder {
+  color: rgba(32, 76, 101, 0.7);
+}
+.common-form .from-group .form-control:focus {
+  border-color: #204C65;
+}
+.common-form .from-group .error-message {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ff0000;
+  margin-top: 4px;
+}
+.common-form .from-group .group-input {
+  position: relative;
+  width: 100%;
+}
+.common-form .from-group .input-icon {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 44px;
+  pointer-events: none;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+.common-form .from-group .input-icon + .form-control {
+  padding-left: 40px;
+}
+.common-form .from-group .input-icon2 {
+  position: absolute;
+  top: 50px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 44px;
+  pointer-events: none;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+.common-form .from-group .input-icon2 + .form-control {
+  padding-left: 40px;
+}
+.common-form .from-group .input-action {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 42px;
+  border: none;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -ms-border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
+  -o-border-radius: 0px 10px 10px 0px;
+  background-color: #eee;
+  cursor: pointer;
+}
+.common-form .from-group .input-action .eye-icon img {
+  width: 24px;
+  height: 24px;
+}
+.common-form .from-group .input-action + .form-control {
+  padding-right: 50px;
+}
+.common-form .from-group .input-action2 {
+  position: absolute;
+  top: 50px;
+  transform: translateY(calc(-50% - 1px));
+  -webkit-transform: translateY(calc(-50% - 1px));
+  -moz-transform: translateY(calc(-50% - 1px));
+  -ms-transform: translateY(calc(-50% - 1px));
+  -o-transform: translateY(calc(-50% - 1px));
+  right: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 42px;
+  border: none;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -ms-border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
+  -o-border-radius: 0px 10px 10px 0px;
+  background-color: #eee;
+  cursor: pointer;
+}
+.common-form .from-group .input-action2 .eye-icon img {
+  width: 24px;
+  height: 24px;
+}
+.common-form .from-group .input-action2 + .form-control {
+  padding-right: 50px;
+}
+.common-form .from-group.label-animated .form-control::placeholder {
+  opacity: 0;
+}
+.common-form .from-group.label-animated .form-field-name {
+  color: rgba(32, 76, 101, 0.7);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  pointer-events: none;
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.common-form .from-group.label-animated .form-control:focus ~ .form-field-name,
+.common-form .from-group.label-animated .form-control.filled + .form-field-name {
+  color: #204C65;
+  font-size: 14px;
+  top: -11px;
+  left: 20px;
+  z-index: 9;
+  opacity: 1;
+}
+.common-form .from-group.label-animated .form-control:focus ~ .form-field-name::before,
+.common-form .from-group.label-animated .form-control.filled + .form-field-name::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -4px;
+  right: -4px;
+  bottom: 0;
+  margin: auto;
+  width: calc(100% + 8px);
+  height: 2px;
+  background-color: #FFFFFF;
+  z-index: -1;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.common-form .from-group.label-animated .form-control:focus::placeholder,
+.common-form .from-group.label-animated .form-control.filled::placeholder {
+  opacity: 1;
+}
+.common-form .from-group.tel-input-group .iti {
+  width: 100%;
+}
+
+.iti__country-list::-webkit-scrollbar {
+  width: 8px;
+}
+.iti__country-list::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.iti__country-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+.iti__country-list::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 /*========== Bootstrap Select Css Start here  ============*/
@@ -489,11 +738,11 @@ picture {
   outline: none;
   box-shadow: inherit;
   padding: 8px 16px;
+  border: 1px solid #ccc;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #204C65;
-  border: 1px solid #ccc;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -529,14 +778,14 @@ picture {
   padding: 0 8px;
 }
 .dropdown.bootstrap-select > .dropdown-menu ul li a {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #204C65;
   position: relative;
   background: transparent;
   padding: 8px 10px;
   margin: 2px 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #204C65;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -749,7 +998,7 @@ picture {
   margin-top: 0;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -946,6 +1195,7 @@ picture {
   position: relative;
   cursor: pointer;
   font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
   color: #204C65;
   user-select: none;
@@ -1100,9 +1350,9 @@ picture {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
+  color: #204C65;
   padding: 8px 20px;
   text-align: center;
-  color: #204C65;
   background-color: transparent;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1137,7 +1387,7 @@ picture {
   padding: 12px 12px 12px 40px;
   border: 1px solid #ccc;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
   color: #000;
   border-radius: 5px;
@@ -1206,7 +1456,7 @@ picture {
   padding: 12px 50px 12px 12px;
   border: 1px solid #ccc;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 400;
   color: #000;
   border-radius: 5px;
@@ -1393,8 +1643,8 @@ picture {
   padding: 20px;
   font-size: 16px;
   line-height: 22px;
-  color: #000;
   font-weight: 400;
+  color: #000;
 }
 .common-modal .modal-content .modal-footer {
   display: flex;
@@ -1577,7 +1827,7 @@ picture {
 .accordion .faq_body_inner {
   padding: 16px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: 400;
   color: #204C65;
 }
@@ -1588,167 +1838,133 @@ picture {
   margin-bottom: 0;
 }
 
-#accordion li.faq_item {
-  position: relative;
-  font-weight: 600;
-  font-size: 22px;
+/*========== Login/Forgot/signUp Css Start here  ============*/
+.lrg-content {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #204C65;
+}
+.lrg-content .lrf-title {
+  font-size: 42px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #204C65;
+  display: block;
+  margin-bottom: 10px;
+}
+.lrg-content .common-form {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
   text-align: left;
-  color: #1d1e31;
-  padding: 30px;
-  border: 1px solid #F5F5F5;
-  background-color: #F5F5F5;
-  margin-bottom: 4px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
 }
-#accordion li.faq_item:last-child {
-  margin-bottom: 0;
+.lrg-content .common-form .remember-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 }
-@media screen and (max-width: 1440px) {
-  #accordion li.faq_item {
-    font-size: 20px;
-  }
+.lrg-content .common-form .remember-group .forgot-link {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #204C65;
+  margin-left: auto;
 }
-@media screen and (max-width: 1440px) {
-  #accordion li.faq_item {
-    font-size: 18px;
-  }
+.lrg-content .common-form .remember-group .forgot-link:focus, .lrg-content .common-form .remember-group .forgot-link:hover {
+  border: none;
+  outline: none;
+  box-shadow: inherit;
+  text-decoration: none;
+  list-style: none;
 }
-@media screen and (max-width: 1280px) {
-  #accordion li.faq_item {
-    padding: 24px;
-    border-radius: 24px;
-    -webkit-border-radius: 24px;
-    -moz-border-radius: 24px;
-    -ms-border-radius: 24px;
-    -o-border-radius: 24px;
-  }
+.lrg-content .common-form .button-wrap {
+  width: 100%;
+  margin: 10px 0;
 }
-@media screen and (max-width: 1024px) {
-  #accordion li.faq_item {
-    padding: 20px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-  }
+.lrg-content .common-form .button-wrap .common-btn {
+  width: 100%;
 }
-@media screen and (max-width: 991px) {
-  #accordion li.faq_item {
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #accordion li.faq_item {
-    font-size: 16px;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-  }
-}
-#accordion li.faq_item .faq_header {
+.lrg-content .common-form .our-with {
   display: block;
   width: 100%;
   position: relative;
-  padding-right: 35px;
-  color: #1d1e31;
-  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #204C65;
+  text-align: center;
 }
-#accordion li.faq_item .faq_header .faqIcon {
-  position: absolute;
-  right: 0px;
-  top: 2px;
-  width: 28px;
-  height: 28px;
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 50%;
-  display: inline-block;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-@media screen and (max-width: 1440px) {
-  #accordion li.faq_item .faq_header .faqIcon {
-    top: -2px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #accordion li.faq_item .faq_header .faqIcon {
-    width: 24px;
-    height: 24px;
-    top: 2px;
-  }
-}
-#accordion li.faq_item .faq_header .faqIcon:after, #accordion li.faq_item .faq_header .faqIcon:before {
+.lrg-content .common-form .our-with::before {
   content: " ";
   position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
   left: 0;
-  height: 12px;
-  width: 2px;
-  background-color: #000;
+  right: 0;
+  width: 100%;
+  height: 1px;
   margin: auto;
+  background-color: rgba(32, 76, 101, 0.3);
 }
-@media screen and (max-width: 767px) {
-  #accordion li.faq_item .faq_header .faqIcon:after, #accordion li.faq_item .faq_header .faqIcon:before {
-    height: 10px;
-  }
+.lrg-content .common-form .our-with span {
+  background-color: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
 }
-#accordion li.faq_item .faq_header .faqIcon:after {
-  transform: rotate(-90deg);
+.lrg-content .common-form .our-login-btn-wrap {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
-#accordion li.faq_item .faq_header.active .faqIcon {
-  background: #204C65;
-  border-color: #204C65;
-  transform: rotate(45deg);
-}
-#accordion li.faq_item .faq_header.active .faqIcon:before {
-  background-color: #ffffff;
-}
-#accordion li.faq_item .faq_header.active .faqIcon::after {
-  background-color: #ffffff;
-}
-#accordion li.faq_item .faq_body .faq_body_inner {
-  color: #1d1e31;
+.lrg-content .common-form .our-login-btn-wrap .our-login-btn {
+  outline: none;
+  box-shadow: inherit;
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 0 0;
-  line-height: 30px;
-  margin-top: 10px;
+  font-weight: 500;
+  color: #204C65;
+  padding: 12px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(32, 76, 101, 0.7);
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-@media screen and (max-width: 991px) {
-  #accordion li.faq_item .faq_body .faq_body_inner {
-    margin-top: 5px;
-    padding: 8px 0 0;
-  }
+.lrg-content .common-form .our-login-btn-wrap .our-login-btn:focus, .lrg-content .common-form .our-login-btn-wrap .our-login-btn:hover {
+  outline: none;
+  box-shadow: inherit;
 }
-@media screen and (max-width: 767px) {
-  #accordion li.faq_item .faq_body .faq_body_inner {
-    font-size: 15px;
-    line-height: 26px;
-  }
+.lrg-content .common-form .back-screen-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #204C65;
+  text-align: center;
 }
-#accordion li.faq_item .faq_body .faq_body_inner p {
-  margin-bottom: 12px;
-}
-#accordion li.faq_item .faq_body .faq_body_inner p:last-child {
-  margin-bottom: 0;
+.lrg-content .common-form .back-screen-link a {
+  display: inline-block;
+  color: #32AE59;
 }
 
 /*# sourceMappingURL=common.css.map */

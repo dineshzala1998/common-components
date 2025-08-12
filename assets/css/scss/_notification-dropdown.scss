@@ -4,7 +4,6 @@
         position: relative;
         @include fix-width-height(40px);
         @include flex-all-center;
-        background-color: transparent;
         @include transition-three;
         @include border-radius(5px);
         border: 1px solid rgba($black, 0.4);
@@ -36,10 +35,7 @@
             background-color: $primery;
             color: white;
             padding: 8px 12px;
-            font-size: 16px;
-            line-height: 20px;
-            // font-family: $secondary-font;
-            font-weight: $w-medium;
+            @include normal-text-medium;
             @include flex-center-between;
             gap: 10px;
         }
@@ -51,11 +47,9 @@
         }
         .view-all {
             color: $secondary;
-            font-size: 16px;
-            line-height: 20px;
-            // font-family: $secondary-font;
-            font-weight: $w-medium;
+            @include normal-text-medium;
             @include transition-three;
+            
             // &:hover {
             //     color: $secondary;
             // }

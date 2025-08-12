@@ -61,11 +61,8 @@
 
         .modal-body{
             padding: 20px;
-            font-size: 16px;
-            line-height: 22px;
+            @include font-line-weight-regular;
             color: $black;
-            // font-family: $primery-font;
-            font-weight: $w-regular;
             
         }
 

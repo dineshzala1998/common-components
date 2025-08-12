@@ -1,0 +1,199 @@
+.common-form{
+    width:100%;
+
+    .from-group{
+        width: 100%;
+        margin-bottom: 0px;
+        position: relative;
+
+        .form-label{
+            display: block;
+            text-align: left;
+            margin-bottom: 6px;
+            @include normal-text-medium;
+        }
+
+        .form-control{
+            text-align: left;
+            @include normal-text-regular;
+            @include input-box($white, #ccc);
+            @include input-placeholder-color(rgba($secondary, 0.7));
+
+            &:focus{
+                border-color: $secondary;
+            }
+        }
+
+        .error-message{
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            line-height: 18px;
+            // font-family: $primery-font;
+            font-weight: $w-regular;
+            color: $danger;
+            margin-top: 4px;
+        }
+
+        .group-input{
+            position: relative;
+            width: 100%;
+        }
+
+        .input-icon{
+            position: absolute;
+            top: 1px;
+            bottom: 1px;
+            left: 1px;
+            @include flex-all-center;
+            width: 40px;
+            height: 44px;
+            pointer-events: none;
+            @include border-radius-all(10px, 0, 0, 10px);
+
+            + {
+                .form-control{
+                    padding-left: 40px;
+                }
+            }
+        }
+
+        /* if label text short use this and change class name input-icon2*/
+        .input-icon2{
+            position: absolute;
+            top: 50px;
+            @include transform-y(-50%);
+            left: 1px;
+            @include flex-all-center;
+            width: 40px;
+            height: 44px;
+            pointer-events: none;
+            @include border-radius-all(10px, 0, 0, 10px);
+
+            + {
+                .form-control{
+                    padding-left: 40px;
+                }
+            }
+        }
+
+        .input-action{
+            position: absolute;
+            top: 2px;
+            bottom: 2px;
+            right: 2px;
+            @include flex-all-center;
+            width: 40px;
+            height: 42px;
+            border: none;
+            @include border-radius-all(0px, 10px, 10px, 0px);
+            background-color: #eee;
+            cursor: pointer;
+
+            .eye-icon{
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            + {
+                .form-control{
+                    padding-right: 50px;
+                }
+            }
+        }
+
+        /* if label text short use this and change class name input-action2*/
+        .input-action2{
+            position: absolute;
+            top: 50px;
+            @include transform-y(calc(-50% - 1px));
+            right: 2px;
+            @include flex-all-center;
+            width: 40px;
+            height: 42px;
+            border: none;
+            @include border-radius-all(0px, 10px, 10px, 0px);
+            background-color: #eee;
+            cursor: pointer;
+
+            .eye-icon{
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            + {
+                .form-control{
+                    padding-right: 50px;
+                }
+            }
+        }
+
+
+        /* Label Animated In Focus Css here..........*/
+
+        &.label-animated{
+            .form-control{
+                &::placeholder{
+                    opacity: 0;
+                }
+            }
+        
+        
+            .form-field-name {
+                color: rgba($secondary, 0.7);
+                @include font-line-weight-regular;
+                pointer-events: none;
+                position: absolute;
+                top: 11px;
+                left: 16px;
+                @include transition-three;
+            }
+            
+            .form-control:focus ~ .form-field-name,
+            .form-control.filled + .form-field-name {
+                color: $secondary;
+                font-size: 14px;
+                top: -11px;
+                left: 20px;
+                z-index: 9;
+                opacity: 1;
+                
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top:-0px;
+                    left: -4px;
+                    right: -4px;
+                    bottom: 0;
+                    margin: auto;
+                    width: calc(100% + 8px);
+                    height: 2px;
+                    background-color: $white;
+                    z-index: -1;
+                    @include transition-three;
+                }
+            }
+            .form-control:focus,
+            .form-control.filled{
+                &::placeholder{
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.tel-input-group{
+            .iti{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+
+.iti__country-list{
+    @include scroll-bar;
+}

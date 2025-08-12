@@ -5,12 +5,9 @@
 
     .nav-link{
         @include border-out-shadow-decoration-none;
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 500;
+        @include normal-text-medium;
         padding: 8px 20px;
         text-align: center;
-        color: $secondary;
         background-color: transparent;
         @include border-radius(10px);
         @include transition-three;

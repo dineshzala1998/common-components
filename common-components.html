@@ -4,14 +4,14 @@
     
     <!-- Required meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
      <!--  Favicon Icon  -->
     <link rel="apple-touch-icon" sizes="180x180" href="">
     <link rel="icon" type="image/png" sizes="32x32" href="">
     <link rel="icon" type="image/png" sizes="16x16" href="">
-
+    
     <!--  Title Name  -->
     <title>Common Components</title>
 
@@ -23,9 +23,13 @@
 
     <!-- Select2 SelectPicker CSS-->
     <link rel="stylesheet" href="assets/css/libs/select2.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/libs/intlTelInput.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/common.css">
+    
 </head>
 <body>
     <div class="container my-4">
@@ -65,7 +69,7 @@
                     <picture class="dropdown-icon"><img src="assets/images/dropdown-icon.svg" alt="Dropdown Icon"></picture>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#"><picture><img src="assets/images/my-account-icon.svg" alt="My Account" width="20px" height="20px"></picture>My Account</a></li>
+                    <li><a class="dropdown-item" href="form-components.html"><picture><img src="assets/images/my-account-icon.svg" alt="My Account" width="20px" height="20px"></picture>My Account</a></li>
                     <li><a class="dropdown-item" href="#"><picture><img src="assets/images/about-icon.svg" alt="About Us" width="20px" height="20px"></picture>About Us</a></li>
                     <li><a class="dropdown-item" href="#"><picture><img src="assets/images/contact-us-icon.svg" alt="Contact Us" width="20px" height="20px"></picture>Contact Us</a></li>
                     <li><a class="dropdown-item" href="#"><picture><img src="assets/images/change-password-icon.svg" alt="Change Password" width="20px" height="20px"></picture>Change Password</a></li>
@@ -82,6 +86,64 @@
         <div class="button-group">
             <button type="button" class="common-btn primary-btn">Primary</button>
             <button type="button" class="common-btn secondry-btn">Secondry</button>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Common Input Code -->
+        <h2 class="components-title">Common Input Code here</h2>
+        <div class="flex-between common-form">
+            <div class="from-group">
+                <label class="form-label">Input Label here</label>
+                <input type="text" class="form-control" placeholder="Please Enter Text here">
+                <span class="error-message">Please Enter Valid Text</span>
+            </div>
+        
+            <div class="from-group label-animated">
+                <label class="form-label">Label Position Change In Focus </label>
+                <div class="group-input">
+                    <input type="text" class="form-control" placeholder="Please Enter Email">
+                    <label class="form-field-name">Input Label Text here</label>
+                </div>
+                <!-- <span class="error-message">Please Enter Valid Text</span> -->
+            </div>
+        
+            <div class="from-group">
+                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text big use this)</span></label>
+                <div class="group-input">
+                    <picture class="input-icon"><img src="assets/images/user-vector.svg" alt="user-vector" width="20" height="20"></picture>
+                    <input type="text" class="form-control" placeholder="Please Enter Text here">
+                </div>
+                <!-- <span class="error-message">Please Enter Valid Text</span> -->
+            </div>
+        
+            <div class="from-group">
+                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text short use this)</span></label>
+                <picture class="input-icon2"><img src="assets/images/user-vector.svg" alt="user-vector" width="20" height="20"></picture>
+                <input type="text" class="form-control" placeholder="Please Enter Text here">
+                <!-- <span class="error-message">Please Enter Valid Text</span> -->
+            </div>
+        
+            <div class="from-group">
+                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text big use this)</span></label>
+                <div class="group-input">
+                    <span class="togglePassword input-action"><picture class="eye-icon"><img src="assets/images/eye.svg" alt="eye" width="24" height="24"></picture></span>
+                    <input type="text" class="form-control" placeholder="Please Enter Text here">
+                </div>
+                <!-- <span class="error-message">Please Enter Valid Text</span> -->
+            </div>
+        
+            <div class="from-group">
+                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text short use this)</span></label>
+                <span class="togglePassword input-action2"><picture class="eye-icon"><img src="assets/images/eye-slash.svg" alt="eye-vector" width="24" height="24"></picture></span>
+                <input type="password" class="form-control" placeholder="Please Enter Text here">
+                <!-- <span class="error-message">Please Enter Valid Text</span> -->
+            </div>
+
+            <div class="from-group tel-input-group">
+                <label class="form-label">Tel Input Label here</label>
+                <input type="text" id="phone" class="form-control" placeholder="Please Enter Text here">
+            </div>
         </div>
 
         <hr class="my-4">
@@ -461,6 +523,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/select2.min.js"></script>
+    <!-- <script src="assets/js/intlTelInput.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
     <!--    Custom js   -->
     <script src="assets/js/custom.js"></script>

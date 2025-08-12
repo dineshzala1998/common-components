@@ -7,11 +7,8 @@
     display: inline-block;
     text-align: center;
     padding: 10px 20px;
-    font-size: $f-r;
-    // font-family: $primery-font;
-    line-height: $lhight-20;
-    font-weight: $w-medium;
     border: 1px solid;
+    @include normal-text-medium;
     @include transition-three;
     @include border-radius(12px);
 
