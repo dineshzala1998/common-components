@@ -18,13 +18,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
 
+    <!-- Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+
     <!-- Bootstrap SelectPicker CSS -->
     <link rel="stylesheet" href="assets/css/libs/bootstrap-select.min.css">
 
     <!-- Select2 SelectPicker CSS-->
     <link rel="stylesheet" href="assets/css/libs/select2.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/libs/intlTelInput.css"> -->
-
+    
+    <!-- Tel Input SelectPiker Css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
 
     <!-- Custom CSS -->
@@ -92,7 +95,7 @@
 
         <!-- Common Input Code -->
         <h2 class="components-title">Common Input Code here</h2>
-        <div class="flex-between common-form">
+        <div class="flex-between common-form" >
             <div class="from-group">
                 <label class="form-label">Input Label here</label>
                 <input type="text" class="form-control" placeholder="Please Enter Text here">
@@ -141,8 +144,16 @@
             </div>
 
             <div class="from-group tel-input-group">
-                <label class="form-label">Tel Input Label here</label>
+                <label class="form-label">Tel Input Label</label>
                 <input type="text" id="phone" class="form-control" placeholder="Please Enter Text here">
+            </div>
+
+            <div class="from-group">
+                <label for="datepicker" class="form-label">Select Date</label>
+                <div class="group-input">
+                    <input type="text" class="form-control datepickerInput" id="datepicker" placeholder="dd-mm-yyyy">
+                </div>
+                
             </div>
         </div>
 
@@ -521,13 +532,28 @@
     <!-- Jquery, Bootstrap, Bootstrap-Select, Select2 JS    -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/select2.min.js"></script>
-    <!-- <script src="assets/js/intlTelInput.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
     <!--    Custom js   -->
     <script src="assets/js/custom.js"></script>
+
+    <script>
+        $(function() {
+            $('.datepickerInput').datepicker({
+                format: 'dd-mm-yyyy',
+                autoclose: true,
+                todayHighlight: true,
+                container: $('.datepickerInput').parent(),
+                templates: {
+                    leftArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>',
+                    rightArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>'
+                }
+            });
+        });
+    </script>
     
 </body>
 </html>

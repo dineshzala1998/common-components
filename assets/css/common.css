@@ -624,6 +624,11 @@ picture {
 .common-form .from-group.tel-input-group .iti {
   width: 100%;
 }
+.common-form .from-group.tel-input-group .iti.iti--separate-dial-code .iti__selected-flag {
+  background-color: #eee;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid white;
+}
 
 .iti__country-list::-webkit-scrollbar {
   width: 8px;

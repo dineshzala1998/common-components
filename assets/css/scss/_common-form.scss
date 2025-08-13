@@ -188,6 +188,14 @@
         &.tel-input-group{
             .iti{
                 width: 100%;
+
+                &.iti--separate-dial-code{
+                    .iti__selected-flag{
+                        background-color: #eee;
+                        border-radius: 10px 0 0 10px;
+                        border: 2px solid #ffff;
+                    }
+                }
             }
         }
     }
