@@ -34,7 +34,7 @@ body {
 a {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
   transition: all 0.3s ease;
@@ -46,19 +46,19 @@ a {
 a:focus, a:hover {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
 }
 
 button, .btn {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   cursor: pointer;
 }
 button:focus, button:hover, .btn:focus, .btn:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 
 ul, ol {
@@ -148,6 +148,8 @@ picture {
   gap: 6px;
   padding: 4px 8px;
   background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(238, 238, 238, 0.5);
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -158,8 +160,6 @@ picture {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  background: rgba(238, 238, 238, 0.5);
 }
 .user-dropdown .user-toggle .user-img {
   display: inline-block;
@@ -228,7 +228,7 @@ picture {
 }
 .user-dropdown .dropdown-menu li .dropdown-item {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -247,7 +247,7 @@ picture {
 }
 .user-dropdown .dropdown-menu li .dropdown-item:focus, .user-dropdown .dropdown-menu li .dropdown-item:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .user-dropdown .dropdown-menu li .dropdown-item:hover {
   background: #eeeeee;
@@ -259,7 +259,7 @@ picture {
 /*========== Notification Dropdown Css Start here  ============*/
 .notification-dropdown .notification-toggle {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   position: relative;
   width: 40px;
   min-width: 40px;
@@ -268,6 +268,8 @@ picture {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(238, 238, 238, 0.5);
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -278,12 +280,10 @@ picture {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  background: rgba(238, 238, 238, 0.5);
 }
 .notification-dropdown .notification-toggle:focus, .notification-dropdown .notification-toggle:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .notification-dropdown .notification-toggle .badge {
   position: absolute;
@@ -400,9 +400,6 @@ picture {
   width: 100%;
   margin-bottom: 0px;
   position: relative;
-  /* if label text short use this and change class name input-icon2*/
-  /* if label text short use this and change class name input-action2*/
-  /* Label Animated In Focus Css here..........*/
 }
 .common-form .from-group .form-label {
   display: block;
@@ -413,6 +410,15 @@ picture {
   font-weight: 500;
   color: #204C65;
 }
+.common-form .from-group .group-input {
+  position: relative;
+  width: 100%;
+}
+.common-form .from-group .req-mark {
+  color: #ff0000;
+  margin-left: 2px;
+  font-weight: 400;
+}
 .common-form .from-group .form-control {
   text-align: left;
   font-size: 16px;
@@ -420,7 +426,7 @@ picture {
   font-weight: 400;
   color: #204C65;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   width: 100%;
   padding: 12px 16px;
   background: #FFFFFF;
@@ -438,7 +444,7 @@ picture {
 }
 .common-form .from-group .form-control:focus, .common-form .from-group .form-control:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .common-form .from-group .form-control::-webkit-input-placeholder {
   color: rgba(32, 76, 101, 0.7);
@@ -467,10 +473,6 @@ picture {
   color: #ff0000;
   margin-top: 4px;
 }
-.common-form .from-group .group-input {
-  position: relative;
-  width: 100%;
-}
 .common-form .from-group .input-icon {
   position: absolute;
   top: 1px;
@@ -489,30 +491,6 @@ picture {
   -o-border-radius: 10px 0 0 10px;
 }
 .common-form .from-group .input-icon + .form-control {
-  padding-left: 40px;
-}
-.common-form .from-group .input-icon2 {
-  position: absolute;
-  top: 50px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  left: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 44px;
-  pointer-events: none;
-  -webkit-border-radius: 10px 0 0 10px;
-  -moz-border-radius: 10px 0 0 10px;
-  -ms-border-radius: 10px 0 0 10px;
-  border-radius: 10px 0 0 10px;
-  -o-border-radius: 10px 0 0 10px;
-}
-.common-form .from-group .input-icon2 + .form-control {
   padding-left: 40px;
 }
 .common-form .from-group .input-action {
@@ -541,40 +519,12 @@ picture {
 .common-form .from-group .input-action + .form-control {
   padding-right: 50px;
 }
-.common-form .from-group .input-action2 {
-  position: absolute;
-  top: 50px;
-  transform: translateY(calc(-50% - 1px));
-  -webkit-transform: translateY(calc(-50% - 1px));
-  -moz-transform: translateY(calc(-50% - 1px));
-  -ms-transform: translateY(calc(-50% - 1px));
-  -o-transform: translateY(calc(-50% - 1px));
-  right: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 42px;
-  border: none;
-  -webkit-border-radius: 0px 10px 10px 0px;
-  -moz-border-radius: 0px 10px 10px 0px;
-  -ms-border-radius: 0px 10px 10px 0px;
-  border-radius: 0px 10px 10px 0px;
-  -o-border-radius: 0px 10px 10px 0px;
-  background-color: #eee;
-  cursor: pointer;
-}
-.common-form .from-group .input-action2 .eye-icon img {
-  width: 24px;
-  height: 24px;
-}
-.common-form .from-group .input-action2 + .form-control {
-  padding-right: 50px;
-}
-.common-form .from-group.label-animated .form-control::placeholder {
+
+/* Label Animated In Focus Css here..........*/
+.label-animated .form-control::placeholder {
   opacity: 0;
 }
-.common-form .from-group.label-animated .form-field-name {
+.label-animated .form-field-name {
   color: rgba(32, 76, 101, 0.7);
   font-size: 16px;
   line-height: 22px;
@@ -589,8 +539,8 @@ picture {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-.common-form .from-group.label-animated .form-control:focus ~ .form-field-name,
-.common-form .from-group.label-animated .form-control.filled + .form-field-name {
+.label-animated .form-control:focus ~ .form-field-name,
+.label-animated .form-control.filled + .form-field-name {
   color: #204C65;
   font-size: 14px;
   top: -11px;
@@ -598,8 +548,8 @@ picture {
   z-index: 9;
   opacity: 1;
 }
-.common-form .from-group.label-animated .form-control:focus ~ .form-field-name::before,
-.common-form .from-group.label-animated .form-control.filled + .form-field-name::before {
+.label-animated .form-control:focus ~ .form-field-name::before,
+.label-animated .form-control.filled + .form-field-name::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -617,17 +567,61 @@ picture {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
 }
-.common-form .from-group.label-animated .form-control:focus::placeholder,
-.common-form .from-group.label-animated .form-control.filled::placeholder {
+.label-animated .form-control:focus::placeholder,
+.label-animated .form-control.filled::placeholder {
   opacity: 1;
 }
-.common-form .from-group.tel-input-group .iti {
+
+/* Input tel Dropdown box css here...*/
+.tel-input-group .iti {
   width: 100%;
 }
-.common-form .from-group.tel-input-group .iti.iti--separate-dial-code .iti__selected-flag {
+.tel-input-group .iti .iti__selected-country {
   background-color: #eee;
   border-radius: 10px 0 0 10px;
   border: 2px solid white;
+  padding: 8px;
+  padding-right: 12px;
+}
+.tel-input-group .iti .iti__selected-country .iti__selected-country-primary {
+  padding: 0;
+  background-color: transparent !important;
+}
+.tel-input-group .iti .iti__selected-country .iti__selected-country-primary .iti__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  right: 4px;
+}
+
+.iti__dropdown-content .iti__search-input {
+  outline: none;
+  box-shadow: none;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  margin: 3px;
+  width: calc(100% - 6px);
+}
+.iti__dropdown-content .iti__search-input:focus, .iti__dropdown-content .iti__search-input:hover {
+  outline: none;
+  box-shadow: none;
+}
+.iti__dropdown-content .iti__search-input:focus {
+  border-color: #204C65;
 }
 
 .iti__country-list::-webkit-scrollbar {
@@ -642,6 +636,40 @@ picture {
 }
 .iti__country-list::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+/* Bootstrap Datepicker Dropdown box css here...*/
+.datepicker.datepicker-dropdown {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.2);
+}
+.datepicker.datepicker-dropdown th, .datepicker.datepicker-dropdown td {
+  padding: 8px;
+}
+.datepicker.datepicker-dropdown .prev, .datepicker.datepicker-dropdown .next {
+  background-color: rgba(32, 76, 101, 0.4);
+  vertical-align: middle;
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+}
+.datepicker.datepicker-dropdown .datepicker-switch {
+  vertical-align: middle;
+  border-left: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  border-radius: 10px;
+}
+.datepicker.datepicker-dropdown table {
+  border-collapse: separate;
+}
+.datepicker.datepicker-dropdown table tr td.day.today {
+  background-image: none;
+  background-color: rgba(32, 76, 101, 0.7);
+  color: #FFFFFF;
+}
+.datepicker.datepicker-dropdown table tr td.day.active {
+  background-image: none;
+  background-color: #32AE59;
 }
 
 /*========== Bootstrap Select Css Start here  ============*/
@@ -659,7 +687,7 @@ picture {
   font-weight: 500;
   color: #204C65;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -673,7 +701,7 @@ picture {
 }
 .dropdown.bootstrap-select .dropdown-toggle.btn-light:focus, .dropdown.bootstrap-select .dropdown-toggle.btn-light:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .dropdown.bootstrap-select .dropdown-toggle.btn-light::after {
   content: " ";
@@ -682,9 +710,9 @@ picture {
   top: 0px;
   bottom: 0;
   background: url("../../assets/images/dropdown-icon.svg") no-repeat center center;
+  background-size: contain;
   width: 15px;
   height: 15px;
-  background-size: contain;
   padding: 0;
   margin: auto 0;
   border: none;
@@ -741,7 +769,7 @@ picture {
 }
 .dropdown.bootstrap-select > .dropdown-menu .bs-searchbox .form-control {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   padding: 8px 16px;
   border: 1px solid #ccc;
   font-size: 16px;
@@ -761,7 +789,7 @@ picture {
 }
 .dropdown.bootstrap-select > .dropdown-menu .bs-searchbox .form-control:focus, .dropdown.bootstrap-select > .dropdown-menu .bs-searchbox .form-control:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .dropdown.bootstrap-select > .dropdown-menu .bs-searchbox .form-control:focus {
   border-color: #204C65;
@@ -923,7 +951,7 @@ picture {
 }
 .select2-box .select2-container--default .select2-selection {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   border-radius: 10px !important;
   padding: 12px 16px;
   padding-right: 40px;
@@ -938,7 +966,7 @@ picture {
 }
 .select2-box .select2-container--default .select2-selection:focus, .select2-box .select2-container--default .select2-selection:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .select2-box .select2-container--default .select2-selection .select2-selection__rendered {
   padding: 0;
@@ -1092,7 +1120,7 @@ picture {
 }
 .select2-container--default .select2-dropdown .select2-search .select2-search__field {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   padding: 8px 16px;
   font-size: 16px;
   line-height: 20px;
@@ -1112,7 +1140,7 @@ picture {
 }
 .select2-container--default .select2-dropdown .select2-search .select2-search__field:focus, .select2-container--default .select2-dropdown .select2-search .select2-search__field:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .select2-container--default .select2-dropdown .select2-search .select2-search__field:focus {
   border-color: #204C65;
@@ -1349,7 +1377,7 @@ picture {
 .tabing-nav .nav-link {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
   font-size: 16px;
@@ -1373,7 +1401,7 @@ picture {
 .tabing-nav .nav-link:focus, .tabing-nav .nav-link:hover {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
 }
@@ -1406,11 +1434,11 @@ picture {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .search-box .search-control:focus, .search-box .search-control:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .search-box .search-control::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
@@ -1442,14 +1470,14 @@ picture {
   justify-content: center;
   align-items: center;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   border: none;
   pointer-events: none;
 }
 .search-box .search-btn:focus, .search-box .search-btn:hover {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 
 .search-box-buton {
@@ -1475,11 +1503,11 @@ picture {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .search-box-buton .search-control:focus, .search-box-buton .search-control:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 .search-box-buton .search-control::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.7);
@@ -1516,13 +1544,13 @@ picture {
   align-items: center;
   background: rgba(238, 238, 238, 0.9);
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   border: none;
 }
 .search-box-buton .search-btn:focus, .search-box-buton .search-btn:hover {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
 
 /*========== Breadcrumb Css Start here  ============*/
@@ -1844,7 +1872,7 @@ picture {
 }
 
 /*========== Login/Forgot/signUp Css Start here  ============*/
-.lrg-content {
+.lrf-content {
   width: 100%;
   text-align: center;
   font-size: 18px;
@@ -1852,7 +1880,7 @@ picture {
   font-weight: 400;
   color: #204C65;
 }
-.lrg-content .lrf-title {
+.lrf-content .lrf-title {
   font-size: 42px;
   line-height: 60px;
   font-weight: 700;
@@ -1860,24 +1888,24 @@ picture {
   display: block;
   margin-bottom: 10px;
 }
-.lrg-content .common-form {
+.lrf-content .common-form {
   padding-top: 30px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 24px;
   text-align: left;
 }
-.lrg-content .common-form .remember-group {
+.lrf-content .common-form .remember-group {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
-.lrg-content .common-form .remember-group .forgot-link {
+.lrf-content .common-form .remember-group .forgot-link {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
   display: inline-block;
@@ -1887,21 +1915,21 @@ picture {
   color: #204C65;
   margin-left: auto;
 }
-.lrg-content .common-form .remember-group .forgot-link:focus, .lrg-content .common-form .remember-group .forgot-link:hover {
+.lrf-content .common-form .remember-group .forgot-link:focus, .lrf-content .common-form .remember-group .forgot-link:hover {
   border: none;
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   text-decoration: none;
   list-style: none;
 }
-.lrg-content .common-form .button-wrap {
+.lrf-content .common-form .button-wrap {
   width: 100%;
   margin: 10px 0;
 }
-.lrg-content .common-form .button-wrap .common-btn {
+.lrf-content .common-form .button-wrap .common-btn {
   width: 100%;
 }
-.lrg-content .common-form .our-with {
+.lrf-content .common-form .our-with {
   display: block;
   width: 100%;
   position: relative;
@@ -1911,7 +1939,7 @@ picture {
   color: #204C65;
   text-align: center;
 }
-.lrg-content .common-form .our-with::before {
+.lrf-content .common-form .our-with::before {
   content: " ";
   position: absolute;
   top: 0;
@@ -1923,21 +1951,21 @@ picture {
   margin: auto;
   background-color: rgba(32, 76, 101, 0.3);
 }
-.lrg-content .common-form .our-with span {
+.lrf-content .common-form .our-with span {
   background-color: #fff;
   display: inline-block;
   padding: 0 10px;
   position: relative;
 }
-.lrg-content .common-form .our-login-btn-wrap {
+.lrf-content .common-form .our-login-btn-wrap {
   margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
-.lrg-content .common-form .our-login-btn-wrap .our-login-btn {
+.lrf-content .common-form .our-login-btn-wrap .our-login-btn {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -1956,18 +1984,18 @@ picture {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.lrg-content .common-form .our-login-btn-wrap .our-login-btn:focus, .lrg-content .common-form .our-login-btn-wrap .our-login-btn:hover {
+.lrf-content .common-form .our-login-btn-wrap .our-login-btn:focus, .lrf-content .common-form .our-login-btn-wrap .our-login-btn:hover {
   outline: none;
-  box-shadow: inherit;
+  box-shadow: none;
 }
-.lrg-content .common-form .back-screen-link {
+.lrf-content .common-form .back-screen-link {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
   color: #204C65;
   text-align: center;
 }
-.lrg-content .common-form .back-screen-link a {
+.lrf-content .common-form .back-screen-link a {
   display: inline-block;
   color: #32AE59;
 }

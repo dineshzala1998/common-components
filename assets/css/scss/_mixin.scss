@@ -193,23 +193,23 @@
 
 @mixin out-shadow-none{
     outline: none;
-    box-shadow: inherit;
+    box-shadow: none;
 
     &:focus, &:hover{
         outline: none;
-        box-shadow: inherit;
+        box-shadow: none;
     }
 }
 
 @mixin border-out-shadow-none{
     outline: none;
-    box-shadow: inherit;
+    box-shadow: none;
     border: none;
     
     &:focus, &:hover{
         border: none;
         outline: none;
-        box-shadow: inherit;
+        box-shadow: none;
     }
 }
 
@@ -221,14 +221,14 @@
 @mixin border-out-shadow-decoration-none{
     border: none;
     outline: none;
-    box-shadow: inherit;
+    box-shadow: none;
     text-decoration: none;
     list-style: none;
     
     &:focus, &:hover{
         border: none;
         outline: none;
-        box-shadow: inherit;
+        box-shadow: none;
         text-decoration: none;
         list-style: none;
     }

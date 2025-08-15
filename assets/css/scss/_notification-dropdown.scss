@@ -4,10 +4,10 @@
         position: relative;
         @include fix-width-height(40px);
         @include flex-all-center;
-        @include transition-three;
-        @include border-radius(5px);
         border: 1px solid rgba($black, 0.4);
         @include background-opacity(#eee, 0.5);
+        @include transition-three;
+        @include border-radius(5px);
 
         .badge {
             position: absolute;

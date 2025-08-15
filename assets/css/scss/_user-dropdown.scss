@@ -4,10 +4,10 @@
         gap: 6px;
         padding: 4px 8px;
         background-color: transparent;
-        @include transition-three;
-        @include border-radius(5px);
         border: 1px solid rgba($black, 0.4);
         @include background-opacity(#eee, 0.5);
+        @include transition-three;
+        @include border-radius(5px);
 
         .user-img{
             display: inline-block;

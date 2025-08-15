@@ -16,22 +16,30 @@
     <title>Common Components</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css">
-
-    <!-- Bootstrap Datepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css"/>
 
     <!-- Bootstrap SelectPicker CSS -->
-    <link rel="stylesheet" href="assets/css/libs/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/libs/bootstrap-select.min.css"/>
 
     <!-- Select2 SelectPicker CSS-->
-    <link rel="stylesheet" href="assets/css/libs/select2.min.css">
+    <link rel="stylesheet" href="assets/css/libs/select2.min.css"/>
+
+    <!-- Bootstrap Datepicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" integrity="sha512-34s5cpvaNG3BknEWSuOncX28vz97bRI59UnVtEEpFX536A7BtZSJHsDyFoCl8S7Dt2TPzcrCEoHBGeM4SUBDBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Tel Input SelectPiker Css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Date Range Picker CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/common.css">
+
+    <style>
+    
+
+    </style>
     
 </head>
 <body>
@@ -97,7 +105,7 @@
         <h2 class="components-title">Common Input Code here</h2>
         <div class="flex-between common-form" >
             <div class="from-group">
-                <label class="form-label">Input Label here</label>
+                <label class="form-label">Input Label here<span class="req-mark">*</span></label>
                 <input type="text" class="form-control" placeholder="Please Enter Text here">
                 <span class="error-message">Please Enter Valid Text</span>
             </div>
@@ -112,7 +120,7 @@
             </div>
         
             <div class="from-group">
-                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text big use this)</span></label>
+                <label class="form-label">Input Label here</label>
                 <div class="group-input">
                     <picture class="input-icon"><img src="assets/images/user-vector.svg" alt="user-vector" width="20" height="20"></picture>
                     <input type="text" class="form-control" placeholder="Please Enter Text here">
@@ -121,40 +129,36 @@
             </div>
         
             <div class="from-group">
-                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text short use this)</span></label>
-                <picture class="input-icon2"><img src="assets/images/user-vector.svg" alt="user-vector" width="20" height="20"></picture>
-                <input type="text" class="form-control" placeholder="Please Enter Text here">
-                <!-- <span class="error-message">Please Enter Valid Text</span> -->
-            </div>
-        
-            <div class="from-group">
-                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text big use this)</span></label>
+                <label class="form-label">Input Label here</label>
                 <div class="group-input">
                     <span class="togglePassword input-action"><picture class="eye-icon"><img src="assets/images/eye.svg" alt="eye" width="24" height="24"></picture></span>
-                    <input type="text" class="form-control" placeholder="Please Enter Text here">
+                    <input type="password" class="form-control" placeholder="Please Enter Text here">
                 </div>
                 <!-- <span class="error-message">Please Enter Valid Text</span> -->
             </div>
-        
-            <div class="from-group">
-                <label class="form-label">Input Label here <span style="font-size: 12px; color: rgb(228, 58, 58);">(if label text short use this)</span></label>
-                <span class="togglePassword input-action2"><picture class="eye-icon"><img src="assets/images/eye-slash.svg" alt="eye-vector" width="24" height="24"></picture></span>
-                <input type="password" class="form-control" placeholder="Please Enter Text here">
-                <!-- <span class="error-message">Please Enter Valid Text</span> -->
-            </div>
 
+            <!--    Tel inpul Box Code here....     -->
             <div class="from-group tel-input-group">
-                <label class="form-label">Tel Input Label</label>
+                <label for="phone" class="form-label">Tel Input Label<span class="req-mark">*</span></label>
                 <input type="text" id="phone" class="form-control" placeholder="Please Enter Text here">
             </div>
 
+            <!--    Bootstrap Datepicker Input Box Code here....     -->
             <div class="from-group">
-                <label for="datepicker" class="form-label">Select Date</label>
+                <label class="form-label">Bootstrap Datepicker Select Date</label>
                 <div class="group-input">
-                    <input type="text" class="form-control datepickerInput" id="datepicker" placeholder="dd-mm-yyyy">
+                    <input type="text" class="form-control datepickerInput" placeholder="dd-mm-yyyy" readonly>
                 </div>
-                
             </div>
+
+            <!--    Bootstrap Datepicker Input Box Code here....     -->
+            <div class="from-group">
+                <label class="form-label">Daterangepicker Select Date</label>
+                <div class="group-input daterange-wrapper">
+                    <input type="text" id="daterange" class="form-control" placeholder="dd-mm-yyyy" readonly>
+                </div>
+            </div>
+            
         </div>
 
         <hr class="my-4">
@@ -200,29 +204,6 @@
                     <option value="Option4">Select Option item 7</option>
                 </select>
             </div>
-            <div>
-                <select class="selectpicker" name="countrynamefleg" title="Select Country name with Flag">
-                    <option data-content='<img src="https://flagcdn.com/w40/in.png"> India'>India</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/us.png"> United States'>United States</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/gb.png"> United Kingdom'>United Kingdom</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/fr.png"> France'>France</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/au.png"> Australia'>+Australia</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/ca.png"> Canada'>Canada</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/de.png"> Germany'>Germany</option>
-                </select>
-            </div>
-            <div>
-                <select class="selectpicker" name="countrycodefleg" title="Select Country Code with Flag">
-                    <option data-content='<img src="https://flagcdn.com/w40/in.png"> (+91)' value="+91">+91</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/us.png"> (+1)' value="+1">+1</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/gb.png"> (+44)' value="+44">+44</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/fr.png"> (+991)' value="+991">+991</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/au.png"> (+61)' value="+61">+61</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/ca.png"> (+1)' value="+1">+1</option>
-                    <option data-content='<img src="https://flagcdn.com/w40/de.png"> (+45)' value="+45">+45</option>
-                </select>
-
-            </div>
         </div>
 
         <hr class="my-4">
@@ -260,33 +241,7 @@
                     <option value="Option4">Select2 SelectPicker Option item 8</option>
                     <option value="Option4">Select2 SelectPicker Option item 9</option>
                 </select>   
-            </div>
-
-            <div class="select2-box">
-                <select id="countrySelectImg" style="width: 100%">
-                    <option></option>
-                    <option value="in" data-flag="https://flagcdn.com/w40/in.png">India</option>
-                    <option value="us" data-flag="https://flagcdn.com/w40/us.png">United States</option>
-                    <option value="gb" data-flag="https://flagcdn.com/w40/gb.png">United Kingdom</option>
-                    <option value="fr" data-flag="https://flagcdn.com/w40/fr.png">France</option>
-                    <option value="au" data-flag="https://flagcdn.com/w40/au.png">Australia</option>
-                    <option value="ca" data-flag="https://flagcdn.com/w40/ca.png">Canada</option>
-                    <option value="de" data-flag="https://flagcdn.com/w40/de.png">Germany</option>
-                </select>
-            </div>
-
-            <div class="select2-box">
-                <select id="countrySelectcode" style="width: 100%">
-                    <option></option>
-                    <option data-flag="https://flagcdn.com/w40/in.png" value="+91">(+91)</option>
-                    <option data-flag="https://flagcdn.com/w40/us.png" value="+1">(+1)</option>
-                    <option data-flag="https://flagcdn.com/w40/gb.png" value="+44">(+44)</option>
-                    <option data-flag="https://flagcdn.com/w40/fr.png" value="+991">(+991)</option>
-                    <option data-flag="https://flagcdn.com/w40/au.png" value="+61">(+61)</option>
-                    <option data-flag="https://flagcdn.com/w40/ca.png" value="+1">(+1)</option>
-                    <option data-flag="https://flagcdn.com/w40/de.png" value="+45">(+45)</option>
-                </select>
-            </div>
+            </div>  
         </div>
 
         <hr class="my-4">
@@ -482,7 +437,7 @@
         <hr class="my-4">
 
         <!-- Custom FAQ Accordion Code -->
-        <h2 class="components-title">Custom FAQ Accordion Code here</h2>
+        <h2 class="components-title">Custom Accordion Code here</h2>
         <ul id="CustomAccordion" class="accordion">
             <li class="faq-item">
                 <div class="faq-item-header">
@@ -525,32 +480,52 @@
         </ul>
         
         <hr class="my-4">
+
+        <div class="flex-between common-form" >
+
+        </div>
         
 
     </div>
 
-    <!-- Jquery, Bootstrap, Bootstrap-Select, Select2 JS    -->
+    <!-- Jquery js  -->
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
 
+    <!-- Bootstrap js  -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap-Select Js -->
+    <script src="assets/js/bootstrap-select.min.js"></script>
+
+    <!-- Select2 JS  -->
+    <script src="assets/js/select2.min.js"></script>
+
+    <!-- Bootstrap Datepicker Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Tel Input Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/js/intlTelInput.min.js" integrity="sha512-O0P3kWy+DEU4z4P9saf3iWbEFSanP1YpMeI0tS39Mh/wz0yngU0tnaLnIWoPC45JUhaLNZNrpg0Hlh8216iyXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Moment & Date Range Picker JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
     <!--    Custom js   -->
     <script src="assets/js/custom.js"></script>
 
     <script>
-        $(function() {
-            $('.datepickerInput').datepicker({
-                format: 'dd-mm-yyyy',
-                autoclose: true,
-                todayHighlight: true,
-                container: $('.datepickerInput').parent(),
-                templates: {
-                    leftArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>',
-                    rightArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>'
-                }
+        $(function(){
+            $('#daterange').daterangepicker({
+                singleDatePicker: true,
+                autoApply: true,
+                autoUpdateInput: false,
+                locale: {
+                    format: 'DD/MM/YYYY'
+                },
+                parentEl: '.daterange-wrapper' // calendar આ div અંદર append થશે
+            }, function(start, end, label){
+                // Manually set the value when user selects date
+                $('#daterange').val(start.format('DD/MM/YYYY'));
             });
         });
     </script>

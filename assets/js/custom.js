@@ -1,8 +1,4 @@
-
-
-
 $(document).ready(function () {
-
     
     /* Custom FAQ Accordion Js Start */
     $('#CustomAccordion .faq-item .faq-item-header').on('click', function () {
@@ -18,7 +14,6 @@ $(document).ready(function () {
             $this.removeClass('active').next().slideUp(400);
         }
     });
-    /* Custom FAQ Accordion Js End */
 
     /*========================================================================================================================================*/
 
@@ -27,7 +22,6 @@ $(document).ready(function () {
         tags: "true",
         // minimumResultsForSearch: Infinity, // disables search
     });
-
 
     /*========================================================================================================================================*/
 
@@ -55,29 +49,28 @@ $(document).ready(function () {
             }
         });
     });
-    // Label Animated Js End
 
     /*========================================================================================================================================*/
+
+    // Bootstrap Datepicker Js Code here...
+    $('.datepickerInput').each(function() {
+        $(this).datepicker({
+            format: 'dd-mm-yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            container: $(this).parent(), // હવે દરેક input માટે અલગ
+            templates: {
+                    leftArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>',
+                    rightArrow: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>'
+                }
+        });
+    });
+    
+    /*========================================================================================================================================*/
+    
+
 });
 /*========================================================================================================================================*/
-
-// Country Code & Flag Select2 Js Start here.......
-function formatCountry(option) {
-  if (!option.id) return option.text;
-  var flagUrl = $(option.element).data('flag');
-  if (!flagUrl) return option.text;
-  return $(`<span><img src="${flagUrl}" alt="${option.text} flag"> ${option.text}</span>`);
-}
-
-$(document).ready(function () {
-  $('#countrySelectImg, #countrySelectcode').select2({
-    placeholder: 'Select a country',
-    // minimumResultsForSearch: Infinity, // disables search
-    templateResult: formatCountry,
-    templateSelection: formatCountry
-  });
-});
-// Country Code & Flag Select2 Js End
 
 /*========================================================================================================================================*/
 
@@ -92,18 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const isHidden = passwordField.type === "password";
             passwordField.type = isHidden ? "text" : "password";
-            eyeIcon.src = isHidden ? "assets/images/eye.svg" : "assets/images/eye-slash.svg";
+            eyeIcon.src = isHidden ? "assets/images/eye-slash.svg" : "assets/images/eye.svg";
         });
     });
 
     // Input Tel Js Start here........ 
     const input = document.querySelector("#phone");
     window.intlTelInput(input, {
-        initialCountry: "in", // default India
-        nationalMode: false,  // shows country code
-        separateDialCode: true, // show dial code separately
-        dropdownContainer: document.body, // keeps dropdown in body
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+        initialCountry: "in",
+        nationalMode: false,
+        separateDialCode: true,
+        showSelectedDialCode: true,
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/js/utils.min.js"
     });
 });
 
