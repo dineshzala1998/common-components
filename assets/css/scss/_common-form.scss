@@ -53,7 +53,7 @@
             left: 1px;
             @include flex-all-center;
             width: 40px;
-            height: 44px;
+            height: 40px;
             pointer-events: none;
             @include border-radius-all(10px, 0, 0, 10px);
 
@@ -71,7 +71,7 @@
             right: 2px;
             @include flex-all-center;
             width: 40px;
-            height: 42px;
+            height: 38px;
             border: none;
             @include border-radius-all(0px, 10px, 10px, 0px);
             background-color: #eee;

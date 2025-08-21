@@ -11,7 +11,7 @@
 
         .user-img{
             display: inline-block;
-            @include fix-width-height(40px);
+            @include fix-width-height(32px);
             @include border-radius(50%);
             overflow: hidden;
             img{
@@ -24,6 +24,10 @@
             display: inline-block;
             @include font-line-weight-regular;
             color: $black;
+
+            @media only screen and (max-width:767px){
+                display: none;
+            }
         }
         .dropdown-icon{
             @include fix-width-height(20px);

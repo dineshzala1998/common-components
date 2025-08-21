@@ -150,12 +150,19 @@
                     border-color: $secondary;
                 }
             }
+            +{
+                .select2-results{
+                    .select2-results__options{
+                        padding-top: 0;
+                    }
+                }
+            }
         }
 
         .select2-results{
             >{
                 .select2-results__options{
-                    padding: 0 8px 10px;
+                    padding: 10px 8px;
                     @include scroll-bar;
 
                     .select2-results__option{

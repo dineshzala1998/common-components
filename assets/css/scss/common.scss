@@ -23,12 +23,16 @@ body{
 
 a {
     @include border-out-shadow-decoration-none;
-    @include transition-three;
+    
 }
 
 button, .btn {
     @include out-shadow-none;
     cursor: pointer;
+}
+
+input, .form-control{
+    @include out-shadow-none;
 }
 
 ul, ol {
@@ -152,4 +156,7 @@ picture{
 @import "_accordion";
 
 /*========== Login/Forgot/signUp Css Start here  ============*/
-@import "_lrf-content"
+@import "_lrf-content";
+
+/*========== Login/Forgot/signUp Css Start here  ============*/
+@import "_side-bar";

@@ -1,0 +1,474 @@
+<script>
+        jQuery(document).ready(function ($) {
+            $(".sidebar-main ul li").each(function () {
+                if ($(this).find("ul").length > 0) {
+                    $(this).addClass("sidebar-dropdown");
+                }
+            });
+
+            $(".nav-item-link").click(function () {
+                let $this = $(this);
+                let $submenu = $this.next("ul");
+                let $parentLi = $this.parent("li");
+
+                // Close same-level siblings always
+                $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+                    .children("ul:visible").slideUp(500);
+                $parentLi.siblings().children(".nav-item-link").removeClass("active-headding");
+                $parentLi.siblings().removeClass("active"); // <-- FIX HERE
+
+                if ($submenu.length) {
+                    if ($submenu.is(":visible")) {
+                        // Close current
+                        $parentLi.removeClass("active");
+                        $this.removeClass("active-headding");
+                        $submenu.find(".nav-item-link").removeClass("active-headding");
+                        $submenu.find("li").removeClass("active");
+                        $submenu.slideUp(500).find("ul").slideUp(500);
+                    } else {
+                        // Open current
+                        $submenu.slideDown(500);
+                        $this.addClass("active-headding");
+                        $parentLi.addClass("active");
+                    }
+                } else {
+                    // No submenu → active class toggle
+                    $parentLi.addClass("active")
+                        .siblings().removeClass("active")
+                        .find("ul:visible").slideUp(500)
+                        .siblings(".nav-item-link").removeClass("active-headding");
+
+                    $this.removeClass("active-headding");
+                }
+            });
+
+            // Page load expand
+            if ($('.nav-items li>a').hasClass("active")) {
+                var activeLink = $('.nav-items').find('.active');
+                activeLink.parents('ul').each(function () {
+                    $(this).css("display", "block");
+                    $(this).prev(".nav-item-link").addClass('active-headding');
+                    $(this).parent("li").addClass("active");
+                });
+            }
+
+            $('.sidebar-toggle').click(function (e) {
+                $('body').toggleClass("sidebar-collapse");
+            });
+            
+        });
+    </script>
+
+<script>
+        jQuery(document).ready(function ($) {
+    $(".sidebar-main ul li").each(function () {
+        if ($(this).find("ul").length > 0) {
+            $(this).addClass("sidebar-dropdown");
+        }
+    });
+
+    $(".nav-item-link").click(function () {
+        let $this = $(this);
+        let $submenu = $this.next("ul");
+        let $parentLi = $this.parent("li");
+
+        // Close same-level siblings always
+        $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+            .children("ul:visible").slideUp(500);
+        $parentLi.siblings().children(".nav-item-link").removeClass("active-headding");
+        $parentLi.siblings().removeClass("active"); // <-- FIX HERE
+
+        if ($submenu.length) {
+            if ($submenu.is(":visible")) {
+                // Close current
+                $parentLi.removeClass("active");
+                $this.removeClass("active-headding");
+                $submenu.find(".nav-item-link").removeClass("active-headding");
+                $submenu.find("li").removeClass("active");
+                $submenu.slideUp(500).find("ul").slideUp(500);
+            } else {
+                // Open current
+                $submenu.slideDown(500);
+                $this.addClass("active-headding");
+                $parentLi.addClass("active");
+            }
+        } else {
+            // No submenu → active class toggle
+            $parentLi.addClass("active")
+                .siblings().removeClass("active")
+                .find("ul:visible").slideUp(500)
+                .siblings(".nav-item-link").removeClass("active-headding");
+
+            $this.removeClass("active-headding");
+        }
+    });
+
+    // Page load expand
+    if ($('.nav-items li>a').hasClass("active")) {
+        var activeLink = $('.nav-items').find('.active');
+        activeLink.parents('ul').each(function () {
+            $(this).css("display", "block");
+            $(this).prev(".nav-item-link").addClass('active-headding');
+            $(this).parent("li").addClass("active");
+        });
+    }
+});
+
+    </script>
+
+    <script>
+jQuery(document).ready(function ($) {
+    $(".sidebar-main ul li").each(function () {
+        if ($(this).find("ul").length > 0) {
+            $(this).addClass("sidebar-dropdown");
+        }
+    });
+
+    $(".nav-item-link").click(function () {
+        let $this = $(this);
+        let $submenu = $this.next("ul");
+        let $parentLi = $this.parent("li");
+
+        // Close same-level siblings
+        $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+            .children("ul:visible").slideUp(500);
+        $parentLi.siblings(".sidebar-dropdown")
+            .children(".nav-item-link").removeClass("active-headding");
+
+        if ($submenu.length) {
+            if ($submenu.is(":visible")) {
+                // Immediately remove class
+                $parentLi.removeClass("active");
+                $this.removeClass("active-headding");
+                $submenu.find(".nav-item-link").removeClass("active-headding");
+                $submenu.find("li").removeClass("active");
+
+                // Animate close
+                $submenu.slideUp(500).find("ul").slideUp(500);
+            } else {
+                // Open current
+                $submenu.slideDown(500);
+                $this.addClass("active-headding");
+                $parentLi.addClass("active");
+            }
+        } 
+        else {
+            // No submenu case
+            $parentLi.addClass("active")
+            //     .siblings().removeClass("active")
+            //     .find("ul:visible").slideUp(500);
+            // $this.removeClass("active-headding");
+        }
+    });
+
+    // Page load expand
+    if ($('.nav-items li>a').hasClass("active")) {
+        var activeLink = $('.nav-items').find('.active');
+        activeLink.parents('ul').each(function () {
+            $(this).css("display", "block");
+            $(this).prev(".nav-item-link").addClass('active-headding');
+            $(this).parent("li").addClass("active");
+        });
+    }
+});
+</script>
+
+
+    <script>
+jQuery(document).ready(function ($) {
+    // Add sidebar-dropdown class if li has ul
+    $(".sidebar-main ul li").each(function () {
+        if ($(this).find("ul").length > 0) {
+            $(this).addClass("sidebar-dropdown");
+        }
+    });
+
+    $(".nav-item-link").click(function () {
+        let $this = $(this);
+        let $submenu = $this.next("ul");
+        let $parentLi = $this.parent("li");
+
+        // Close same-level siblings
+        $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+            .children("ul:visible").slideUp(500, function () {
+                $(this).parent("li").removeClass("active") ;
+                $(this).siblings(".nav-item-link").removeClass("active-headding");
+            })
+            .siblings(".nav-item-link").removeClass("active-headding");
+
+        if ($submenu.length) {
+            if ($submenu.is(":visible")) {
+                // Close current + ALL children
+                $submenu.slideUp(500, function () {
+                    $parentLi.removeClass("active");
+                    $this.removeClass("active-headding");
+                }).find("ul").slideUp(500);
+
+                $submenu.find(".nav-item-link").removeClass("active-headding");
+                $submenu.find("li").removeClass("active");
+            } else {
+                // Open current
+                $submenu.slideDown(500);
+                $this.addClass("active-headding");
+                $parentLi.addClass("active");
+            }
+        } else {
+            // If no submenu → still close siblings
+            $parentLi.addClass("active").siblings().removeClass("active")
+                .find("ul:visible").slideUp(500, function () {
+                    $(this).parent("li").removeClass("active");
+                    $(this).siblings(".nav-item-link").removeClass("active-headding");
+                });
+            $this.removeClass("active-headding");
+        }
+    });
+
+    // Page load time expand karo if already active
+    if ($('.nav-items li>a').hasClass("active")) {
+        var activeLink = $('.nav-items').find('.active');
+        activeLink.parents('ul').each(function () {
+            $(this).css("display", "block");
+            $(this).prev(".nav-item-link").addClass('active-headding');
+            $(this).parent("li").addClass("active");
+        });
+    }
+});
+</script>
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+    $(".sidebar-main ul li").each(function () {
+        if ($(this).find("ul").length > 0) {
+            $(this).addClass("sidebar-dropdown");
+        }
+    });
+
+    $(".nav-item-link").click(function () {
+        let $this = $(this);
+        let $submenu = $this.next("ul");
+        let $parentLi = $this.parent("li");
+
+        // SAME LEVEL siblings close
+        $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+            .children("ul:visible").slideUp(500)
+            .siblings(".nav-item-link").removeClass("active-headding");
+
+        if ($submenu.length) {
+            if ($submenu.is(":visible")) {
+                // Close current + ALL children
+                $submenu.slideUp(500).find("ul").slideUp(500);
+
+                // Remove classes from all children
+                $submenu.find(".nav-item-link").removeClass("active-headding");
+                $submenu.find("li").removeClass("active");
+
+                // Remove from current parent too
+                $this.removeClass("active-headding");
+                $parentLi.removeClass("active");
+            } else {
+                // Open current
+                $submenu.slideDown(500);
+                $this.addClass("active-headding");
+                $parentLi.addClass("active");
+            }
+        } else {
+            // No submenu → still close siblings
+            $parentLi.addClass("active").siblings().removeClass("active")
+                .find("ul:visible").slideUp(500)
+                .siblings(".nav-item-link").removeClass("active-headding");
+            $this.removeClass("active-headding");
+        }
+
+        // EXTRA CLEANUP: 
+        // if any submenu is closed → make sure its parent loses active/heading
+        $parentLi.parents("li.sidebar-dropdown").each(function () {
+            let $li = $(this);
+            if ($li.find("> ul").is(":hidden")) {
+                $li.removeClass("active");
+                $li.children(".nav-item-link").removeClass("active-headding");
+            }
+        });
+    });
+
+    // page load time expand karo
+    if ($('.nav-items li>a').hasClass("active")) {
+        var activeLink = $('.nav-items').find('.active');
+
+        activeLink.parents('ul').each(function () {
+            $(this).css("display", "block");
+            $(this).prev(".nav-item-link").addClass('active-headding');
+            $(this).parent("li").addClass("active");
+        });
+    }
+});
+
+    </script>
+    
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".sidebar-main ul li").each(function () {
+                if ($(this).find("ul").length > 0) {
+                    $(this).addClass("sidebar-dropdown");
+                }
+            });
+
+            $(".nav-item-link").click(function () {
+                let $this = $(this);
+                let $submenu = $this.next("ul");
+                let $parentLi = $this.parent("li");
+
+                $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+                .children("ul:visible").slideUp(500)
+                .siblings(".nav-item-link").removeClass("active-headding");
+
+                if ($submenu.length) {
+                    // SAME LEVEL close karo
+                    $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+                        .children("ul:visible").slideUp(500)
+                        .siblings(".nav-item-link").removeClass("active-headding");
+
+                    if ($submenu.is(":visible")) {
+                        // Close current + ALL children
+                        $submenu.slideUp(500).find("ul").slideUp(500);
+                        $submenu.find(".nav-item-link").removeClass("active-headding");
+                        $submenu.find("li").removeClass("active");
+                        $this.removeClass("active-headding");
+                        $parentLi.removeClass("active");
+                    } else {
+                        // Open current
+                        $submenu.slideDown(500);
+                        $this.addClass("active-headding");
+                        $parentLi.addClass("active");
+                    }
+                } else {
+            // if no submenu → still close siblings
+            $parentLi.addClass("active").siblings().removeClass("active")
+                .find("ul:visible").slideUp(500);
+            $this.removeClass("active-headding");
+        }
+            });
+
+            // page load time expand karo
+            if ($('.nav-items li>a').hasClass("active")) {
+                var activeLink = $('.nav-items').find('.active');
+
+                activeLink.parents('ul').each(function () {
+                    $(this).css("display", "block");
+                    $(this).prev(".nav-item-link").addClass('active-headding');
+                    $(this).parent("li").addClass("active");
+                });
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            // li ma ul hoy to sidebar-dropdown class add karo
+            $(".sidebar-main ul li").each(function () {
+                if ($(this).find("ul").length > 0) {
+                    $(this).addClass("sidebar-dropdown");
+                }
+            });
+
+            $(".nav-item-link").click(function (e) {
+                let $this = $(this);
+                let $submenu = $this.next("ul");
+                let $parentLi = $this.parent("li");
+
+                // only same level na siblings close karo
+                $parentLi.siblings(".sidebar-dropdown").removeClass("active")
+                    .children("ul").slideUp(500)
+                    .siblings(".nav-item-link").removeClass("active-headding");
+                    // $this.parent().siblings().removeClass("active").find("ul").slideUp(500);
+
+                // current toggle
+                if ($submenu.length && $submenu.is(":visible")) {
+                    $submenu.slideUp(500);
+                    $this.removeClass("active-headding");
+                    $parentLi.removeClass("active");
+                } else if ($submenu.length) {
+                    $submenu.slideDown(500);
+                    $this.addClass("active-headding");
+                    $parentLi.addClass("active");
+                }
+            });
+
+            // page load time active expand karo
+            if ($('.nav-items li>a').hasClass("active")) {
+                var activeLink = $('.nav-items').find('.active');
+
+                activeLink.parents('ul').each(function () {
+                    $(this).css("display", "block");
+                    $(this).prev(".nav-item-link").addClass('active-headding');
+                    $(this).parent("li").addClass("active");
+                });
+            }
+        });
+
+    </script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            // li ma ul hoy to sidebar-dropdown class add karo
+            jQuery(".sidebar-main ul li").each(function () {
+                if (jQuery(this).find("ul").length > 0) {
+                    jQuery(this).addClass("sidebar-dropdown");
+                }
+            });
+
+            jQuery(".nav-item-link").click(function () {
+                let $this = jQuery(this);
+                let $submenu = $this.next("ul");
+                let $parentLi = $this.parent("li");
+
+                // biji jagya band karo
+                jQuery(".nav-item-link").not($this).removeClass('active-headding');
+                $this.parent().siblings().removeClass("active").find("ul").slideUp(500);
+
+                // current toggle
+                if ($submenu.is(":visible")) {
+                    $submenu.slideUp(500);
+                    $this.removeClass('active-headding');
+                    $parentLi.removeClass("active");
+                } else {
+                    $submenu.slideDown(500);
+                    $this.addClass('active-headding');
+                    $parentLi.addClass("active");
+                }
+            });
+
+            // page load time active expand karo
+            if ($('.nav-items li>a').hasClass("active")) {
+                var activeLink = $('.nav-items').find('.active');
+
+                activeLink.parents('ul').each(function () {
+                    $(this).css("display", "block");
+                    jQuery(this).prev(".nav-item-link").addClass('active-headding');
+                    jQuery(this).parent("li").addClass("active");
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $('.sidebar-toggle').click(function (e) {
+                $('body').toggleClass("sidebar-collapse");
+            });
+        jQuery(document).ready(function ($) {
+            jQuery(".nav-item-link").click(function () {
+                let $this = jQuery(this);
+                jQuery(".nav-item-link").not($this).removeClass('active-headding');
+                $this.parent().siblings().find("ul").slideUp(250);
+                $this.next("ul").slideToggle(250);
+                $this.toggleClass('active-headding');
+            });
+            if ($('.nav-items li>a').hasClass("active")) {
+                var activeLink = $('.nav-items').find('.active');
+                activeLink.parents('ul').each(function () {
+                    $(this).css("display", "block");
+                    jQuery(this).prev(".nav-item-link").addClass('active-headding');
+                });
+            }
+        });
+    </script>

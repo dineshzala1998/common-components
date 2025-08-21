@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!--  Favicon Icon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
+    
+    <!--  Title Name  -->
+    <title>Deshbord</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/common.css">
+</head>
+<body>
+    <div class="admin-wrrapper">
+        <header class="deshbord-header">
+            <button class="sidebar-toggle"><img src="assets/images/dropdown-icon.svg" alt=""></button>
+            <div class="head-left">
+                <div class="search-box">
+                    <input type="text" name="search-box" class="search-control" placeholder="Search...">
+                    <button class="search-btn" type="button"><picture><img src="assets/images/search-icon.svg" alt="Search Icon" width="20" height="21"></picture></button>
+                </div>
+            </div>
+            <div class="head-right">
+                <div class="user-dropdown">
+                    <button class="user-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <picture class="user-img"><img src="assets/images/user.webp" alt="User Icon" width="30" height="30"></picture>
+                        <span class="user-name">Charles Loftin</span>
+                        <picture class="dropdown-icon"><img src="assets/images/dropdown-icon.svg" alt="Dropdown Icon"></picture>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="form-components.html"><picture><img src="assets/images/my-account-icon.svg" alt="My Account" width="20px" height="20px"></picture>My Account</a></li>
+                        <li><a class="dropdown-item" href="#"><picture><img src="assets/images/about-icon.svg" alt="About Us" width="20px" height="20px"></picture>About Us</a></li>
+                        <li><a class="dropdown-item" href="#"><picture><img src="assets/images/contact-us-icon.svg" alt="Contact Us" width="20px" height="20px"></picture>Contact Us</a></li>
+                        <li><a class="dropdown-item" href="#"><picture><img src="assets/images/change-password-icon.svg" alt="Change Password" width="20px" height="20px"></picture>Change Password</a></li>
+                        <li><button type="button" class="dropdown-item"><picture><img src="assets/images/logout-icon.svg" alt="Logout" width="20px" height="20px"></picture>Logout</button></li>
+                        <li><button type="button" class="dropdown-item"><picture><img src="assets/images/delete-account-icon.svg" alt="Delete Account" width="20px" height="20px"></picture>Delete Account</button></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar-main">
+            <button class="sidebar-toggle"><img src="assets/images/dropdown-icon.svg" alt=""></button>
+            <div class="sidebar-logo">
+                <a href="javascript:void(0)" target="_blank"><picture><img src="assets/images/logo.svg" alt="logo" width="200" height="50"></picture></a>
+            </div>
+            <ul class="sidebar-menus">
+                <li class="nav-items">
+                    <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Profile</span></button>
+                    <ul>
+                        <li>
+                            <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Profile Settings</span></button>
+                            <ul>
+                                <li><a href="javascript:void(0)" class="active nav-item-link">Friends </a></li>
+                            <li><a href="javascript:void(0)" class="nav-item-link">Studio Request </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">View Profile</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Account Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">My Content</span></button>
+                    <ul>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Prices</picture></a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link"></picture>Virtual Tips</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link"></picture>Albums</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link"></picture>Archives</a></li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Shows</span></button>
+                    <ul>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Create Club Show</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Create Live-zi Event</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Live-Zi Management</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Schedule Session</a></li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <a href="javascript:void(0)" class="nav-item-link"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Booking Request</span></a>
+                </li>
+                <li class="nav-items">
+                    <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Game and Bots</span></button>
+                    <ul>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Automated Messages</a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Spinning Wheel</a></li>
+                    </ul>
+                </li>
+                <li class="nav-items">
+                    <button class="nav-item-link" aria-expanded="false"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Connections</span></button>
+                    <ul>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Friends </a></li>
+                        <li><a href="javascript:void(0)" class="nav-item-link">Studio Request </a></li>
+                    </ul>
+                </li>	
+                <li class="nav-items">
+                    <a href="#" class="active nav-item-link"><picture><img src="assets/images/user-vector.svg" alt="icon" width="20" height="20"></picture><span class="link-name">Mail</span></a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+     <!--  Jquery js  -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!--   Bootstrap js  -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!--   Custom js   -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $(".sidebar-main ul li:has(ul)").addClass("sidebar-dropdown");
+
+            $(".nav-item-link").click(function () {
+                let $this = $(this),
+                    $submenu = $this.next("ul"),
+                    $li = $this.parent("li"),
+                    $siblings = $li.siblings(".sidebar-dropdown");
+
+                // Close siblings
+                $siblings.removeClass("active").children("ul:visible").slideUp(500);
+                $siblings.find(">.nav-item-link").removeClass("active-headding");
+                $siblings.removeClass("active");
+
+                if ($submenu.length) {
+                    if ($submenu.is(":visible")) {
+                        $li.removeClass("active");
+                        $this.removeClass("active-headding");
+                        $submenu.find(".nav-item-link").removeClass("active-headding");
+                        $submenu.find("li").removeClass("active");
+                        $submenu.slideUp(500).find("ul").slideUp(500);
+                    } else {
+                        $submenu.slideDown(500);
+                        $this.addClass("active-headding");
+                        $li.addClass("active");
+                    }
+                } else {
+                    $li.addClass("active")
+                        .siblings().removeClass("active")
+                        .find("ul:visible").slideUp(500)
+                        .siblings(".nav-item-link").removeClass("active-headding");
+                    $this.removeClass("active-headding");
+                }
+            });
+
+            $(".nav-items li>a.active").parents("ul").show().prev(".nav-item-link")
+                .addClass("active-headding").parent("li").addClass("active");
+        });
+    </script>
+
+    <script>
+        jQuery(function ($) {
+            $(".sidebar-toggle").click(() => $("body").toggleClass("sidebar-collapse"));
+            // outside click (only < 991px)
+            $(document).mouseup(function (e) {
+                if ($(window).width() <= 991) {
+                    let $sidebar = $(".sidebar-main");
+                    if (!$sidebar.is(e.target) && $sidebar.has(e.target).length === 0) {
+                        $("body").removeClass("sidebar-collapse");
+                    }
+                }
+            });
+
+            // handle resize (in case window resize kare to)
+            $(window).resize(function () {
+                if ($(window).width() > 991) {
+                    $("body").removeClass("sidebar-collapse");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

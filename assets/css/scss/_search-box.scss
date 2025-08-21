@@ -3,18 +3,14 @@
     position: relative;
 
     .search-control{
-        width: 100%;
-        padding: 12px 12px 12px 40px;
-        border: 1px solid #ccc;
-        @include font-line-weight-regular;
-        color: $black;
-        @include border-radius(5px);
-        @include transition-three;
-        @include out-shadow-none;
+        @include input-box($white, #ccc);
+        text-align: left;
+        @include normal-text-regular;
         @include input-placeholder-color(rgba($black, 0.7));
+        padding-left: 40px;
 
         &:focus{
-            border-color: $primery;
+            border-color: $secondary;
         }
     }
     .search-btn{
@@ -36,18 +32,14 @@
     position: relative;
 
     .search-control{
-        width: 100%;
-        padding: 12px 50px 12px 12px;
-        border: 1px solid #ccc;
-        @include font-line-weight-regular;
-        color: $black;
-        @include border-radius(5px);
-        @include transition-three;
-        @include out-shadow-none;
+        @include input-box($white, #ccc);
+        text-align: left;
+        @include normal-text-regular;
         @include input-placeholder-color(rgba($black, 0.7));
+        padding-right: 50px;
 
         &:focus{
-            border-color: $primery;
+            border-color: $secondary;
         }
     }
     .search-btn{

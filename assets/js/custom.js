@@ -67,6 +67,21 @@ $(document).ready(function () {
     });
     
     /*========================================================================================================================================*/
+    // Daterangepicker Js Code here...
+    $(function(){
+        $('#daterange').daterangepicker({
+            singleDatePicker: true,
+            autoApply: true,
+            autoUpdateInput: false,
+            locale: {
+                format: 'DD/MM/YYYY'
+            },
+            parentEl: '.daterange-wrapper' // calendar આ div અંદર append થશે
+        }, function(start, end, label){
+            // Manually set the value when user selects date
+            $('#daterange').val(start.format('DD/MM/YYYY'));
+        });
+    });
     
 
 });

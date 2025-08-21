@@ -263,7 +263,7 @@
 
 /*============  scroll-bar Mixin Here    =============*/
 @mixin scroll-bar {
-    &::-webkit-scrollbar {width: 8px;}
+    &::-webkit-scrollbar {width: 6px;}
     &::-webkit-scrollbar:horizontal {height: 6px;}
     &::-webkit-scrollbar-thumb {background-color: rgba($black, 0.5);border-radius: 4px;}
     &::-webkit-scrollbar-track {background-color: transparent;}
@@ -304,11 +304,74 @@
 }
 
 @mixin input-box($bg-color, $bd-color) {
-    @include out-shadow-none;
     width: 100%;
-    padding: 12px 16px;
+    padding: 10px 16px;
     background: $bg-color;
     border: 1px solid $bd-color;
     @include border-radius(10px);
     @include transition-three;
+}
+
+@mixin sidebarwidth{
+    max-width: 250px;
+}
+
+@mixin fadeout-aimation{
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    visibility: hidden;
+}
+
+@mixin fadein-aimation{
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeInt;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    visibility: visible;
+}
+
+
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+}
+
+@mixin slideout-animation {
+  height: auto; // max possible height set karo
+  overflow: hidden;
+
+    transition: all 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin slidein-animation {
+  height: 0;
+  overflow: hidden;
+
+    transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
 }
