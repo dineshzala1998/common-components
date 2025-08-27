@@ -2087,6 +2087,7 @@ picture {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   white-space: nowrap;
+  margin: 0;
 }
 .sidebar-main .sidebar-menus .nav-items .nav-item-link span {
   white-space: nowrap;
@@ -2097,10 +2098,10 @@ picture {
   -o-transition: all 0.3s ease;
 }
 .sidebar-main .sidebar-menus .nav-items .nav-item-link picture {
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
-  min-height: 20px;
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  min-height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2117,37 +2118,48 @@ picture {
   margin: 0;
 }
 .sidebar-main .sidebar-menus .nav-items {
-  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(32, 76, 101, 0.2);
+}
+.sidebar-main .sidebar-menus .nav-items:first-child > .nav-item-link {
+  margin-top: 0;
+}
+.sidebar-main .sidebar-menus .nav-items:last-child {
+  border-bottom: none;
+}
+.sidebar-main .sidebar-menus .nav-items:last-child > .nav-item-link {
+  margin-bottom: 0;
 }
 .sidebar-main .sidebar-menus .nav-items > .nav-item-link {
-  padding: 10px 10px;
-  border-radius: 10px 0 0 10px;
-  border: 1px solid rgba(32, 76, 101, 0.1);
-  border-right: none;
+  padding: 8px 8px;
+  margin: 3px 0;
+  border-radius: 5px 0 0 5px;
 }
 .sidebar-main .sidebar-menus .nav-items > .nav-item-link:hover {
   background-color: rgba(32, 76, 101, 0.1);
 }
+.sidebar-main .sidebar-menus .nav-items ul {
+  padding-left: 24px;
+  border-top: 1px solid rgba(32, 76, 101, 0.2);
+}
 .sidebar-main .sidebar-menus .nav-items ul li {
+  border-bottom: 1px solid rgba(32, 76, 101, 0.2);
   padding: 3px 0;
 }
-.sidebar-main .sidebar-menus .nav-items ul li:first-child {
-  padding-top: 6px;
-}
 .sidebar-main .sidebar-menus .nav-items ul li:last-child {
-  padding-bottom: 0;
+  border-bottom: none;
 }
 .sidebar-main .sidebar-menus .nav-items ul li .nav-item-link {
-  padding: 5px 10px;
-  border-radius: 10px 0 0 10px;
-  border: 1px solid rgba(32, 76, 101, 0.1);
-  border-right: none;
+  padding: 6px 8px;
+  border-radius: 5px 0 0 5px;
 }
 .sidebar-main .sidebar-menus .nav-items ul li .nav-item-link:hover {
   background-color: rgba(32, 76, 101, 0.1);
 }
-.sidebar-main .sidebar-menus .nav-items ul li .nav-item-link.active {
-  background-color: rgba(32, 76, 101, 0.1);
+.sidebar-main .sidebar-menus .nav-items ul li ul li:last-child {
+  padding-bottom: 0;
+}
+.sidebar-main .sidebar-menus li.sidebar-dropdown .sidebar-dropdown > .nav-item-link {
+  margin-bottom: 3px;
 }
 .sidebar-main .sidebar-menus li.sidebar-dropdown > .nav-item-link {
   padding-right: 16px;
