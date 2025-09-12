@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Thumbnail → Full Gallery</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css"/>
+   
+   
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .thumb {
+      width: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+      border: 1px solid #ddd;
+    }
+    .thumb img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .element-item {
+        margin-bottom: 40px;
+    }
+    .f-carousel__toolbar .is-left, .f-carousel__toolbar .is-middle{
+        opacity: 0;
+    }
+    .f-carousel__toolbar .is-right button:not(:last-child){
+        display: none;
+    }
+    
+    .fancybox__thumbs{
+        display: none;
+    }
+
+       
+
+        
+    
+  </style>
+</head>
+<body>
+
+  <h2>Single Thumbnail → Lightbox Gallery</h2>
+
+    <div class="element-item-wrap" style="display: flex;">
+        <div class="element-item">
+            <div class="thumb" data-fancybox="gallery" data-caption="Caption" href="https://picsum.photos/id/1015/1200/800">
+                <img src="https://picsum.photos/id/1015/400/300" alt="Gallery Thumbnail" >
+            </div>
+            <!-- Hidden images (no thumbnail, but still part of gallery) -->
+            <div data-fancybox="gallery" href="https://picsum.photos/id/1016/1200/800"></div>
+            <div data-fancybox="gallery" href="https://picsum.photos/id/1018/1200/800"></div>
+            <div data-fancybox="gallery" href="https://picsum.photos/id/1020/1200/800"></div>
+            <div data-fancybox="gallery" href="https://picsum.photos/id/1024/1200/800"></div>
+        </div>
+
+        <div class="element-item">
+            <div class="thumb" data-fancybox="gallery1" href="https://picsum.photos/id/1040/1200/800">
+                <img src="https://picsum.photos/id/1040/400/300" alt="Project 3 Thumbnail">
+            </div>
+            <!-- Hidden images (no thumbnail, but still part of gallery) -->
+            <div data-fancybox="gallery1" href="https://picsum.photos/id/1041/1200/800"></div>
+            <div data-fancybox="gallery1" href="https://picsum.photos/id/1042/1200/800"></div>
+        </div>
+    </div>
+
+  <!-- Jquery js  -->
+    <script src="assets/js/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind('[data-fancybox]', {
+        Thumbs: { autoStart: true },
+        Toolbar: { display: ["close"] }
+    });
+  </script>
+</body>
+</html>

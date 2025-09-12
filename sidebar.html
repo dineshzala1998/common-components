@@ -126,11 +126,11 @@
 
             $(".nav-item-link").click(function () {
                 let $this = $(this),
-                    $submenu = $this.next("ul"),
-                    $li = $this.parent("li"),
-                    $siblings = $li.siblings(".sidebar-dropdown");
+                $submenu = $this.next("ul"),
+                $li = $this.parent("li"),
+                $siblings = $li.siblings(".sidebar-dropdown");
 
-                // Close siblings
+                
                 $siblings.removeClass("active").children("ul:visible").slideUp(500);
                 $siblings.find(">.nav-item-link").removeClass("active-headding");
                 $siblings.removeClass("active");
@@ -157,14 +157,13 @@
             });
 
             $(".nav-items li>a.active").parents("ul").show().prev(".nav-item-link")
-                .addClass("active-headding").parent("li").addClass("active");
+            .addClass("active-headding").parent("li").addClass("active");
         });
     </script>
 
     <script>
         jQuery(function ($) {
             $(".sidebar-toggle").click(() => $("body").toggleClass("sidebar-collapse"));
-            // outside click (only < 991px)
             $(document).mouseup(function (e) {
                 if ($(window).width() <= 991) {
                     let $sidebar = $(".sidebar-main");
@@ -174,7 +173,6 @@
                 }
             });
 
-            // handle resize (in case window resize kare to)
             $(window).resize(function () {
                 if ($(window).width() > 991) {
                     $("body").removeClass("sidebar-collapse");
