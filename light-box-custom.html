@@ -13,31 +13,25 @@
     <link rel="icon" type="image/png" sizes="16x16" href="">
     
     <!--  Title Name  -->
-    <title>Common Components</title>
-
-
-    <!-- jQuery CDN Fallback -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYp4g0Q1F6Q1b6jtyiZj6tZ1p2g9z7+3h2Q1QzZk=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>');</script>
+    <title>Common Components</title>    
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css"/>
-
-
-    <!-- Lightbox2 CSS CDN (no integrity) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Lightbox CSS local fallback -->
-    <!-- <link rel="stylesheet" href="assets/css/libs/lightbox.min.css"/> -->
+    
+    <link rel="stylesheet" href="assets/css/libs/lightbox.min.css"/>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/common.css">
 
     <style>
-
-        .lightbox .lb-close{
+        .lightbox .lb-closeContainer{
             position: fixed;
             top: 10px;
             right: 10px;
+        }
+
+        .lightbox .lb-close{
+            
             background-color: #fff;
             opacity: 1 !important;
             background-position: center;
@@ -59,6 +53,21 @@
             border-radius: 50px;
             opacity: 1;
         }
+        .lb-outerContainer{
+            max-width: 1024px;
+            width: 100% !important;
+            max-height: 1024px;
+            height: 100% !important;
+        } 
+        .lb-container >img{
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .gallery-scroll{
+            max-width: 500px;
+            width: 100%;
+        }
     </style>
     
 </head>
@@ -68,16 +77,16 @@
         <div class="gallery-scroll">
         
             <!-- Visible Thumbnail -->
-            <a href="https://picsum.photos/id/1015/1200/800" data-lightbox="clinic" data-title="custom-file.html">
+            <a href="assets/images/elearning-dashboard/elearning-first.webp" data-lightbox="clinic" data-title="dribbble-caption/custom-file.html" class="load-html-caption">
                 <div class="gallery-image">
-                    <img src="https://picsum.photos/id/1015/400/300" alt="Clinic 1">
+                    <img src="assets/images/elearning-dashboard/elearning-first.webp" alt="Clinic 1">
                 </div>
             </a>
 
             <!-- Hidden Images (no thumbnail, but in same gallery group) -->
-            <a href="https://picsum.photos/id/1016/1200/800" data-lightbox="clinic" data-title="Clinic Room 2" style="display:none;"></a>
-            <a href="https://picsum.photos/id/1018/1200/800" data-lightbox="clinic" data-title="Clinic Room 3" style="display:none;"></a>
-            <a href="https://picsum.photos/id/1020/1200/800" data-lightbox="clinic" data-title="Clinic Room 4" style="display:none;"></a>
+            <a href="assets/images/elearning-dashboard/elearning-second.webp" data-lightbox="clinic" data-title="dribbble-caption/dribble-caption-one.html" class="load-html-caption"></a>
+            <a href="assets/images/elearning-dashboard/elearning-third.webp" data-lightbox="clinic" data-title="dribbble-caption/dribble-caption-two.html" class="load-html-caption"></a>
+            <a href="assets/images/elearning-dashboard/elearning-fourth.webp" data-lightbox="clinic" data-title="dribbble-caption/dribble-caption-three.html" class="load-html-caption"></a>
 
         </div>
     </div>
@@ -87,81 +96,69 @@
 
 
     <!-- Bootstrap js  -->
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- Lightbox2 JS CDN (no integrity) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Lightbox JS local fallback -->
-    <script>window.lightbox || document.write('<script src="assets/js/lightbox.min.js"><\/script>');</script>
+    <script src="assets/js/lightbox.min.js"></script>
     
-        
-
-    <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    if (window.lightbox && typeof lightbox.option === "function") {
-      lightbox.option({
-        resizeDuration: 200,
-        wrapAround: true,        // 🔹 Last image pachi first image ma loop
-        alwaysShowNavOnTouchDevices: true, // 🔹 Mobile ma arrows force show
-        fadeDuration: 200,
-        imageFadeDuration: 200
-      });
-    }
-  });
-</script>
 
 <script>
-// FINAL: Always show .html file content as caption in Lightbox
-// This script will fetch and display the content of a .html file as the caption in Lightbox2
-// whenever an image with data-title ending in .html is opened, including on next/prev/keyboard navigation.
-document.addEventListener("DOMContentLoaded", function () {
-    // Helper: fetch .html file and set as caption
-    function setHtmlCaption(dataTitle) {
-        if (dataTitle && dataTitle.endsWith('.html')) {
-            // Fetch the HTML file content
-            fetch(dataTitle)
-                .then(function (response) { return response.text(); })
-                .then(function (html) {
-                    // Replace the Lightbox caption with the HTML content
-                    var lbCaption = document.querySelector('.lb-caption');
-                    if (lbCaption) {
-                        lbCaption.innerHTML = html;
-                    }
-                });
-        }
-    }
-    // On lightbox image change (open, next, prev, keyboard)
-    function trySetCaption() {
-        setTimeout(function () {
-            var lbData = document.querySelector('.lb-data');
-            if (!lbData) return;
-            var title = '';
-            // Find the current image's data-title by matching href with .lb-image src
-            var imgs = document.querySelectorAll('a[data-lightbox]');
-            var imgSrc = document.querySelector('.lb-image')?.getAttribute('src');
-            imgs.forEach(function(a) {
-                if (a.getAttribute('href') === imgSrc) {
-                    title = a.getAttribute('data-title');
-                }
+document.addEventListener('DOMContentLoaded', function () {
+  // Helper: fetch and set caption if .html
+  function setHtmlCaptionIfNeeded() {
+    setTimeout(function () {
+      var imgSrc = document.querySelector('.lb-image')?.getAttribute('src');
+      var anchors = document.querySelectorAll('a.load-html-caption[data-lightbox]');
+      var found = null;
+      anchors.forEach(function(a) {
+        if (a.getAttribute('href') === imgSrc) found = a;
+      });
+      if (found) {
+        var file = found.getAttribute('data-title');
+        if (file && file.endsWith('.html')) {
+          fetch(file)
+            .then(res => res.text())
+            .then(html => {
+              var lbCaption = document.querySelector('.lb-caption');
+              if (lbCaption) lbCaption.innerHTML = html;
             });
-            setHtmlCaption(title);
-        }, 100); // Wait for Lightbox to update DOM
+        }
+      }
+    }, 1000);
+  }
+
+  // On lightbox open and next/prev
+  document.body.addEventListener('click', function(e) {
+    if (
+      e.target.matches('a.load-html-caption[data-lightbox]') ||
+      e.target.classList.contains('lb-next') ||
+      e.target.classList.contains('lb-prev')
+    ) {
+      setHtmlCaptionIfNeeded();
     }
-    // Listen for all Lightbox open/next/prev events (mouse/touch)
-    document.body.addEventListener('click', function(e) {
-        if (e.target.matches('a[data-lightbox], .lb-prev, .lb-next')) {
-            trySetCaption();
-        }
-    }, true);
-    // Also on Lightbox image load (for keyboard navigation)
-    document.body.addEventListener('keydown', function(e) {
-        if (document.querySelector('.lb-image')) {
-            setTimeout(trySetCaption, 120);
-        }
+  }, true);
+
+  // On keyboard navigation
+  document.body.addEventListener('keydown', function(e) {
+    if (document.querySelector('.lb-image')) {
+      setTimeout(setHtmlCaptionIfNeeded, 120);
+    }
+  });
+
+  // Lightbox2 options: enable wrapAround (loop)
+  if (window.lightbox && typeof lightbox.option === "function") {
+    lightbox.option({
+      resizeDuration: 200,
+      wrapAround: true, // Loop enabled
+      alwaysShowNavOnTouchDevices: true,
+      fadeDuration: 200,
+      imageFadeDuration: 200
     });
+  }
 });
 </script>
+
+
+
 
     
 </body>

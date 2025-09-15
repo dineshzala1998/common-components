@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,14 +48,13 @@
 
     <div class="element-item-wrap" style="display: flex;">
         <div class="element-item">
-            <div class="thumb" data-fancybox="gallery" data-caption="Caption" href="https://picsum.photos/id/1015/1200/800">
+            <a class="thumb load-html-caption" data-fancybox="gallery" data-caption-file="dribbble-caption/custom-file.html" href="https://picsum.photos/id/1015/1200/800">
                 <img src="https://picsum.photos/id/1015/400/300" alt="Gallery Thumbnail" >
-            </div>
+            </a>
             <!-- Hidden images (no thumbnail, but still part of gallery) -->
-            <div data-fancybox="gallery" href="https://picsum.photos/id/1016/1200/800"></div>
-            <div data-fancybox="gallery" href="https://picsum.photos/id/1018/1200/800"></div>
-            <div data-fancybox="gallery" href="https://picsum.photos/id/1020/1200/800"></div>
-            <div data-fancybox="gallery" href="https://picsum.photos/id/1024/1200/800"></div>
+            <div class="load-html-caption" data-fancybox="gallery" data-caption-file="dribbble-caption/dribble-caption-one.html" href="https://picsum.photos/id/1016/1200/800"></div>
+            <div class="load-html-caption" data-fancybox="gallery" data-caption-file="dribbble-caption/dribble-caption-two.html" href="https://picsum.photos/id/1018/1200/800"></div>
+            <div class="load-html-caption" data-fancybox="gallery" data-caption-file="dribbble-caption/dribble-caption-three.html" href="https://picsum.photos/id/1020/1200/800"></div>
         </div>
 
         <div class="element-item">
@@ -72,10 +72,19 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
   <script>
-    Fancybox.bind('[data-fancybox]', {
-        Thumbs: { autoStart: true },
-        Toolbar: { display: ["close"] }
-    });
-  </script>
+Fancybox.bind('[data-fancybox]', {
+  caption: (fancybox, slide) => {
+    let file = slide.$trigger?.dataset.captionFile;
+    if (file && file.endsWith(".html")) {
+      return fetch(file)
+        .then(res => res.ok ? res.text() : "⚠️ Caption file not found")
+        .catch(err => "⚠️ Error loading caption");
+    }
+    return slide.$trigger?.dataset.caption || "";
+  }
+});
+</script>
+
+
 </body>
 </html>
