@@ -25,10 +25,10 @@
     <link rel="stylesheet" href="assets/css/libs/select2.min.css"/>
 
     <!-- Bootstrap Datepicker CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" integrity="sha512-34s5cpvaNG3BknEWSuOncX28vz97bRI59UnVtEEpFX536A7BtZSJHsDyFoCl8S7Dt2TPzcrCEoHBGeM4SUBDBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css"/>
     
     <!-- Tel Input SelectPiker Css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/css/intlTelInput.min.css" integrity="sha512-X3pJz9m4oT4uHCYS6UjxVdWk1yxSJJIJOJMIkf7TjPpb1BzugjiFyHu7WsXQvMMMZTnGUA9Q/GyxxCWNDZpdHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/css/intlTelInput.min.css"/>
 
     <!-- Date Range Picker CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -373,11 +373,11 @@
                     <div class="modal-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, incidunt expedita numquam perferendis asperiores, et iusto molestias, distinctio voluptates vitae nostrum nemo recusandae mollitia reiciendis ipsum ratione eaque. Facilis, explicabo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo facilis autem nam ut exercitationem minima, rerum reprehenderit animi voluptatibus aspernatur ullam recusandae nostrum dolores doloremque aut doloribus accusamus assumenda aperiam?</p>
                         <div class="custom-inputs mt-3">
-                                <label class="custom-input-btn">
-                                    <input type="checkbox" name="checkbox-model">
-                                    <span class="checkmark"></span>
-                                    Custom checkbox text here
-                                </label>
+                            <label class="custom-input-btn">
+                                <input type="checkbox" name="checkbox-model">
+                                <span class="checkmark"></span>
+                                Custom checkbox text here
+                            </label>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -483,8 +483,55 @@
 
     </div>
 
+   <button class="scrollToTop" aria-label="Back to top">
+  <svg class="progress-ring" viewBox="0 0 100 100">
+    <!-- <circle class="progress-bg" cx="50" cy="50" r="0" /> -->
+    <circle class="progress-fg" cx="50" cy="50" r="44" />
+  </svg>
+  <span class="arrow">
+    <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.0001 0.359375L21.4062 2.57812L0.40625 20.5781L5.59395 26.6719L20.0001 14.3281V53.6406H28.0001V14.3281L42.4062 26.6719L47.5939 20.5781L26.5938 2.57812L24.0001 0.359375Z" fill="white"></path>
+    </svg>
+  </span>
+</button>
+
     <!-- Jquery js  -->
     <script src="assets/js/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+  const $win = $(window);
+  const $btn = $(".scrollToTop");
+  const $fg = $(".progress-fg");
+  const radius = 44;
+  const circumference = 2 * Math.PI * radius;
+  $fg.css("stroke-dasharray", circumference);
+
+  let scrollTimer;
+
+  $win.on("scroll", function () {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function () {
+      const scrollTop = $win.scrollTop();
+      const scrollHeight = $(document).height() - $win.height();
+      const progress = scrollHeight > 0 ? Math.min(1, scrollTop / scrollHeight) : 0;
+      const offset = circumference * (1 - progress);
+      $fg.css("stroke-dashoffset", offset);
+
+      if (scrollTop > 100) {
+        $btn.fadeIn();
+      } else {
+        $btn.fadeOut();
+      }
+    }, 30);
+  });
+
+  $btn.on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+});
+
+    </script>
 
     <!-- Bootstrap js  -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -496,10 +543,10 @@
     <script src="assets/js/select2.min.js"></script>
 
     <!-- Bootstrap Datepicker Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
 
     <!-- Tel Input Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/js/intlTelInput.min.js" integrity="sha512-O0P3kWy+DEU4z4P9saf3iWbEFSanP1YpMeI0tS39Mh/wz0yngU0tnaLnIWoPC45JUhaLNZNrpg0Hlh8216iyXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/25.3.2/build/js/intlTelInput.min.js"></script>
     
     <!-- Moment & Date Range Picker JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>

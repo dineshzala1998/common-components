@@ -13,7 +13,7 @@
         @include transition-three;
 
         &.active, &:hover{
-            background-color: $primery;
+            background-color: $primary;
             color: $white;
         }
     }

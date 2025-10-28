@@ -40,7 +40,7 @@
             text-align: left;
             font-size: 14px;
             line-height: 18px;
-            // font-family: $primery-font;
+            // font-family: $primary-font;
             font-weight: $w-regular;
             color: $danger;
             margin-top: 4px;
@@ -233,7 +233,7 @@
                         }
                         &.active{
                             background-image: none;
-                            background-color: $primery;
+                            background-color: $primary;
                         }
                     }
                 }

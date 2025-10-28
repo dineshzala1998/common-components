@@ -219,19 +219,8 @@
 }
 
 @mixin border-out-shadow-decoration-none{
-    border: none;
-    outline: none;
-    box-shadow: none;
-    text-decoration: none;
-    list-style: none;
-    
-    &:focus, &:hover{
-        border: none;
-        outline: none;
-        box-shadow: none;
-        text-decoration: none;
-        list-style: none;
-    }
+    @include border-out-shadow-none;
+    @include list-style-decoration;
 }
 
 /*============  Fix Widht/Height Property Mixin Here    =============*/
@@ -283,14 +272,14 @@
 @mixin font-line-weight-regular {
     font-size: 16px;
     line-height: 22px;
-    // font-family: $primery-font;
+    // font-family: $primary-font;
     font-weight: $w-regular;
 }
 
 @mixin normal-text-regular{
     font-size: 16px;
     line-height: 20px;
-    // font-family: $primery-font;
+    // font-family: $primary-font;
     font-weight: $w-regular;
     color: $secondary;
 }
@@ -298,7 +287,7 @@
 @mixin normal-text-medium{
     font-size: 16px;
     line-height: 20px;
-    // font-family: $primery-font;
+    // font-family: $primary-font;
     font-weight: $w-medium;
     color: $secondary;
 }
@@ -311,6 +300,9 @@
     @include border-radius(10px);
     @include transition-three;
 }
+
+
+/*============  Sidebar Mixin code here    =============*/
 
 @mixin sidebarwidth{
     max-width: 250px;
@@ -335,8 +327,6 @@
     animation-fill-mode: both;
     visibility: visible;
 }
-
-
 
 @keyframes fadeOut {
     from {

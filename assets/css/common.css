@@ -15,6 +15,7 @@
 /*============  Input Placeholder Color Mixin Here    =============*/
 /*============  scroll-bar Mixin Here    =============*/
 /*============  Column Count Mixin Here    =============*/
+/*============  Sidebar Mixin code here    =============*/
 @keyframes fadeOut {
   from {
     opacity: 1; }
@@ -40,17 +41,15 @@ body {
   text-align: left; }
 
 a {
-  border: none;
   outline: none;
   box-shadow: none;
-  text-decoration: none;
-  list-style: none; }
+  border: none;
+  list-style: none;
+  text-decoration: none; }
   a:focus, a:hover {
     border: none;
     outline: none;
-    box-shadow: none;
-    text-decoration: none;
-    list-style: none; }
+    box-shadow: none; }
 
 button, .btn {
   outline: none;
@@ -332,7 +331,6 @@ picture {
   display: inline-block;
   text-align: center;
   padding: 10px 20px;
-  border: 1px solid;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
@@ -349,18 +347,18 @@ picture {
   -o-border-radius: 12px; }
   .common-btn.primary-btn {
     background-color: #32AE59;
-    border-color: #32AE59;
+    border: 1px solid #32AE59;
     color: #FFFFFF; }
     .common-btn.primary-btn:hover {
       background-color: #204C65;
-      border-color: #204C65; }
+      border: 1px solid #204C65; }
   .common-btn.secondry-btn {
     background-color: transparent;
-    border-color: #204C65;
+    border: 1px solid #204C65;
     color: #204C65; }
     .common-btn.secondry-btn:hover {
       background-color: #32AE59;
-      border-color: #32AE59;
+      border: 1px solid #32AE59;
       color: #FFFFFF; }
 
 /*========== Common Input Box Css Start here  ============*/
@@ -1064,73 +1062,6 @@ picture {
   .select2-container--default .select2-dropdown.select2-dropdown--above {
     top: -4px; }
 
-/*========== Custome Radio Button Css Start here  ============*/
-.custom-radio {
-  display: inline-flex;
-  gap: 16px; }
-  .custom-radio .radio-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #204C65;
-    user-select: none; }
-    .custom-radio .radio-btn input {
-      width: 100%;
-      height: 18px;
-      opacity: 0;
-      cursor: pointer;
-      position: absolute; }
-      .custom-radio .radio-btn input:checked ~ .checkmark::after {
-        opacity: 1; }
-      .custom-radio .radio-btn input:checked ~ .label-text {
-        color: red; }
-    .custom-radio .radio-btn .checkmark {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 18px;
-      min-width: 18px;
-      height: 18px;
-      min-height: 18px;
-      background-color: #fff;
-      border: 1px solid #204C65;
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      transition: all 0.3s ease;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease; }
-      .custom-radio .radio-btn .checkmark::after {
-        content: " ";
-        position: absolute;
-        opacity: 0;
-        width: 8px;
-        min-width: 8px;
-        height: 8px;
-        min-height: 8px;
-        background: #204C65;
-        margin: auto;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease; }
-
 /*========== Custome Checkbox Css Start here  ============*/
 .custom-inputs {
   display: inline-flex;
@@ -1231,11 +1162,11 @@ picture {
   gap: 16px;
   padding-bottom: 20px; }
   .tabing-nav .nav-link {
-    border: none;
     outline: none;
     box-shadow: none;
-    text-decoration: none;
+    border: none;
     list-style: none;
+    text-decoration: none;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
@@ -1256,9 +1187,7 @@ picture {
     .tabing-nav .nav-link:focus, .tabing-nav .nav-link:hover {
       border: none;
       outline: none;
-      box-shadow: none;
-      text-decoration: none;
-      list-style: none; }
+      box-shadow: none; }
     .tabing-nav .nav-link.active, .tabing-nav .nav-link:hover {
       background-color: #32AE59;
       color: #FFFFFF; }
@@ -1684,11 +1613,11 @@ picture {
       align-items: center;
       gap: 12px; }
       .lrf-content .common-form .remember-group .forgot-link {
-        border: none;
         outline: none;
         box-shadow: none;
-        text-decoration: none;
+        border: none;
         list-style: none;
+        text-decoration: none;
         display: inline-block;
         font-size: 16px;
         line-height: 20px;
@@ -1698,9 +1627,7 @@ picture {
         .lrf-content .common-form .remember-group .forgot-link:focus, .lrf-content .common-form .remember-group .forgot-link:hover {
           border: none;
           outline: none;
-          box-shadow: none;
-          text-decoration: none;
-          list-style: none; }
+          box-shadow: none; }
     .lrf-content .common-form .button-wrap {
       width: 100%;
       margin: 10px 0; }
@@ -2072,5 +1999,133 @@ picture {
     -o-transition: all 0.3s ease; }
   .sidebar-collapse .sidebar-main {
     left: 0; } }
+/*========== Header Css Start here  ============*/
+.header {
+  background-color: #f8f9fa;
+  padding: 12px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%; }
+  .header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header .header-logo img {
+    max-width: 140px; }
+  .header .header-menu .main-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .header .header-menu .main-menu li a {
+      text-decoration: none;
+      color: #000;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease; }
+      .header .header-menu .main-menu li a:hover, .header .header-menu .main-menu li a.active {
+        background-color: #e9ecef;
+        color: #32AE59; }
+  .header .header-action {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+    .header .header-action .switch {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 40px; }
+      .header .header-action .switch .slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: #272751;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        z-index: 99;
+        border: 1px solid rgba(0, 0, 0, 0.1); }
+        .header .header-action .switch .slider:before {
+          position: absolute;
+          left: 4px;
+          bottom: 0px;
+          top: 0px;
+          margin: auto 0;
+          width: 32px;
+          height: 32px;
+          content: "";
+          border-radius: 50%;
+          background-color: #fff;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease; }
+    .header .header-action #toggle {
+      opacity: 0;
+      touch-action: none; }
+      .header .header-action #toggle:checked ~ .slider {
+        background-color: #FFFFFF; }
+      .header .header-action #toggle:checked ~ .slider:before {
+        background-color: #FFFFFF;
+        box-shadow: inset -12px -8px 0 0px #272751;
+        transform: translate(48px, 0px); }
+      .header .header-action #toggle:checked ~ .slide-block {
+        left: 0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0; }
+
+.scrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999; }
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg); }
+
+.progress-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 6; }
+
+.progress-fg {
+  fill: none;
+  stroke: #f16122;
+  stroke-width: 6;
+  stroke-dasharray: 276.46;
+  stroke-dashoffset: 276.46;
+  transition: stroke-dashoffset 0.1s linear; }
+
+.scrollToTop .arrow {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  color: #0b84ff;
+  pointer-events: none; }
+  .scrollToTop .arrow svg {
+    width: 20px;
+    height: 20px; }
 
 /*# sourceMappingURL=common.css.map */

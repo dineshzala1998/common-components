@@ -16,7 +16,7 @@ body{
     font-size: 16px;
     line-height: 20px;
     color: $black;
-    // font-family: $primery-font;
+    // font-family: $primary-font;
     font-weight: $w-regular;
     text-align: left
 }
@@ -127,12 +127,8 @@ picture{
 @import "_select2-selectpicker";
 
 
-/*========== Custome Radio Button Css Start here  ============*/
-@import "_custom-radio";
-
-
 /*========== Custome Checkbox Css Start here  ============*/
-@import "_custom-checkbox";
+@import "_custom-inputs-btn";
 
 
 /*========== Tabing Css Start here  ============*/
@@ -154,8 +150,69 @@ picture{
 /*========== Accordion Css Start here  ============*/
 @import "_accordion";
 
+
 /*========== Login/Forgot/signUp Css Start here  ============*/
 @import "_lrf-content";
 
+
 /*========== Login/Forgot/signUp Css Start here  ============*/
 @import "_side-bar";
+
+/*========== Header Css Start here  ============*/
+@import "_header";
+
+
+
+.scrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border: none;
+  border-radius: 50%;
+//   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 6;
+}
+
+.progress-fg {
+  fill: none;
+  stroke: #f16122;
+  stroke-width: 6;
+  stroke-dasharray: 276.46;
+  stroke-dashoffset: 276.46;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.scrollToTop .arrow {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  color: #0b84ff;
+  pointer-events: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

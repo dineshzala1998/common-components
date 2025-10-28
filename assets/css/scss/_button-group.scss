@@ -7,30 +7,29 @@
     display: inline-block;
     text-align: center;
     padding: 10px 20px;
-    border: 1px solid;
     @include normal-text-medium;
     @include transition-three;
     @include border-radius(12px);
 
     &.primary-btn{
-        background-color: $primery;
-        border-color: $primery;
+        background-color: $primary;
+        border:1px solid $primary;
         color: $white;
 
         &:hover{
             background-color: $secondary;
-            border-color: $secondary;
+            border:1px solid $secondary;
         }
     }
 
     &.secondry-btn{
         background-color: transparent;
-        border-color: $secondary;
+        border:1px solid $secondary;
         color: $secondary;
 
         &:hover{
-            background-color: $primery;
-            border-color: $primery;
+            background-color: $primary;
+            border:1px solid $primary;
             color: $white;
         }
     }
